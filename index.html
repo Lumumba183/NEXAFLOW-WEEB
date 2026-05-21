@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexaFlow Digital — Websites, AI Agents & Automation</title>
+    <meta name="description" content="Full-stack digital solutions for modern businesses. Websites, AI calling agents, WhatsApp automation, and chatbots — built for results.">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --primary-light: #1e293b;
+            --accent: #3b82f6;
+            --accent-glow: #60a5fa;
+            --gold: #f59e0b;
+            --gold-light: #fbbf24;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-dark: #64748b;
+            --success: #10b981;
+            --border: #334155;
+            --card: #1e293b;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--primary); color: var(--text); line-height: 1.6; }
+        a { color: inherit; text-decoration: none; }
+
+        /* Nav */
+        nav { position: fixed; top: 0; width: 100%; background: rgba(15,23,42,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); z-index: 1000; padding: 1rem 0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; }
+        .logo span { color: var(--accent-glow); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text-muted); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta { background: var(--accent); color: white; padding: 0.6rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; }
+        .nav-cta:hover { background: var(--accent-glow); }
+        .mobile-menu { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+
+        /* Hero */
+        .hero { min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 8rem 2rem 4rem; background: linear-gradient(135deg, var(--primary) 0%, #1e3a5f 50%, var(--primary) 100%); position: relative; overflow: hidden; }
+        .hero::before { content: ''; position: absolute; top: -50%; right: -20%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%); border-radius: 50%; animation: float 6s ease-in-out infinite; }
+        .hero::after { content: ''; position: absolute; bottom: -30%; left: -10%; width: 400px; height: 400px; background: radial-gradient(circle, rgba(245,158,11,0.1) 0%, transparent 70%); border-radius: 50%; animation: float 8s ease-in-out infinite reverse; }
+        @keyframes float { 0%,100%{transform:translate(0,0)} 50%{transform:translate(30px,-30px)} }
+        .hero-content { max-width: 800px; position: relative; z-index: 1; }
+        .hero-badge { display: inline-block; background: rgba(59,130,246,0.15); border: 1px solid rgba(59,130,246,0.3); color: var(--accent-glow); padding: 0.5rem 1.2rem; border-radius: 50px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: clamp(2.5rem,5vw,4rem); font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; }
+        .hero h1 .highlight { background: linear-gradient(135deg, var(--accent-glow), var(--gold-light)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { font-size: 1.25rem; color: var(--text-muted); max-width: 600px; margin: 0 auto 2rem; }
+        .hero-cta-group { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+        .btn-primary { background: linear-gradient(135deg, var(--accent), var(--accent-glow)); color: white; padding: 1rem 2.5rem; border-radius: 12px; font-weight: 700; font-size: 1rem; display: inline-flex; align-items: center; gap: 0.5rem; border: none; cursor: pointer; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 40px rgba(59,130,246,0.3); }
+        .btn-secondary { background: transparent; color: var(--text); padding: 1rem 2.5rem; border-radius: 12px; font-weight: 600; font-size: 1rem; border: 2px solid var(--border); display: inline-flex; align-items: center; gap: 0.5rem; }
+        .btn-secondary:hover { border-color: var(--accent); color: var(--accent-glow); }
+
+        /* Sections */
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+        .section-header { text-align: center; margin-bottom: 4rem; padding-top: 4rem; }
+        .section-header h2 { font-size: clamp(2rem,4vw,3rem); font-weight: 800; margin-bottom: 1rem; }
+        .section-header p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+
+        /* Services */
+        .services { padding: 4rem 0; background: var(--primary); }
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; transition: all 0.3s; position: relative; overflow: hidden; }
+        .service-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--accent), var(--gold)); transform: scaleX(0); transition: transform 0.3s; }
+        .service-card:hover::before { transform: scaleX(1); }
+        .service-card:hover { transform: translateY(-5px); border-color: rgba(59,130,246,0.3); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        .service-num { font-size: 3rem; font-weight: 800; color: rgba(59,130,246,0.2); position: absolute; top: 1rem; right: 1.5rem; }
+        .service-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .service-card h3 { font-size: 1.2rem; font-weight: 700; margin-bottom: 0.75rem; }
+        .service-card p { color: var(--text-muted); font-size: 0.95rem; }
+
+        /* Pricing */
+        .pricing { padding: 4rem 0; background: linear-gradient(180deg, var(--primary) 0%, var(--primary-light) 100%); }
+        .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .pricing-card { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 2.5rem; position: relative; transition: all 0.3s; }
+        .pricing-card.popular { border-color: var(--accent); box-shadow: 0 0 40px rgba(59,130,246,0.1); }
+        .popular-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: linear-gradient(135deg, var(--accent), var(--accent-glow)); color: white; padding: 0.4rem 1.5rem; border-radius: 50px; font-size: 0.8rem; font-weight: 700; }
+        .pricing-card h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .pricing-card .subtitle { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; }
+        .price { font-size: 3.5rem; font-weight: 800; color: var(--text); margin-bottom: 0.25rem; }
+        .price-currency { font-size: 1rem; font-weight: 400; color: var(--text-muted); }
+        .pricing-features { list-style: none; margin: 1.5rem 0; }
+        .pricing-features li { padding: 0.5rem 0; border-bottom: 1px solid rgba(51,65,85,0.3); font-size: 0.9rem; display: flex; align-items: flex-start; gap: 0.5rem; }
+        .pricing-features li::before { content: '✓'; color: var(--success); font-weight: 700; flex-shrink: 0; }
+        .pricing-btn { width: 100%; padding: 1rem; border-radius: 12px; border: 2px solid var(--border); background: transparent; color: var(--text); font-weight: 700; font-size: 1rem; cursor: pointer; text-align: center; text-decoration: none; display: block; }
+        .pricing-btn:hover { border-color: var(--accent); background: rgba(59,130,246,0.1); }
+        .pricing-card.popular .pricing-btn { background: linear-gradient(135deg, var(--accent), var(--accent-glow)); border: none; color: white; }
+        .pricing-card.popular .pricing-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(59,130,246,0.3); }
+        .maintenance-note { text-align: center; color: var(--text-muted); font-size: 0.9rem; margin-top: 0.5rem; }
+
+        /* Value Added Services */
+        .value-services { padding: 3rem 0; background: var(--primary-light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .value-table { width: 100%; max-width: 700px; margin: 2rem auto 0; border-collapse: collapse; }
+        .value-table th, .value-table td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+        .value-table th { color: var(--accent-glow); font-weight: 600; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        .value-table td { color: var(--text-muted); font-size: 0.95rem; }
+        .value-table td:last-child { text-align: right; color: var(--gold-light); font-weight: 600; }
+
+        /* Portfolio */
+        .portfolio { padding: 4rem 0; background: var(--primary); }
+        .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .portfolio-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: all 0.3s; }
+        .portfolio-card:hover { transform: translateY(-5px); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        .portfolio-img { width: 100%; height: 180px; object-fit: cover; background: linear-gradient(135deg, var(--primary-light), #1e3a5f); display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+        .portfolio-info { padding: 1.5rem; }
+        .portfolio-badge { display: inline-block; background: rgba(16,185,129,0.15); color: var(--success); padding: 0.3rem 0.8rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.5rem; }
+        .portfolio-info h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .portfolio-info p { color: var(--text-muted); font-size: 0.9rem; }
+
+        /* Testimonials */
+        .testimonials { padding: 4rem 0; background: linear-gradient(180deg, var(--primary) 0%, var(--primary-light) 100%); }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .testimonial-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; position: relative; }
+        .testimonial-card::before { content: '"'; position: absolute; top: 1rem; left: 1.5rem; font-size: 4rem; color: var(--accent); opacity: 0.3; line-height: 1; }
+        .testimonial-text { font-size: 1rem; color: var(--text-muted); margin-bottom: 1.5rem; margin-top: 1rem; }
+        .testimonial-author { display: flex; align-items: center; gap: 1rem; }
+        .testimonial-avatar { width: 48px; height: 48px; background: linear-gradient(135deg, var(--accent), var(--gold)); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 1.2rem; }
+        .testimonial-name { font-weight: 700; }
+        .testimonial-role { color: var(--text-dark); font-size: 0.85rem; }
+
+        /* Marquee */
+        .marquee { padding: 1.5rem 0; background: var(--primary-light); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); overflow: hidden; white-space: nowrap; }
+        .marquee-content { display: inline-block; animation: marquee 20s linear infinite; }
+        .marquee span { color: var(--text-dark); font-size: 0.85rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; margin: 0 1rem; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* Why Us */
+        .why-us { padding: 4rem 0; background: var(--primary); }
+        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .why-card { text-align: center; padding: 2rem; }
+        .why-icon { font-size: 2.5rem; margin-bottom: 1rem; }
+        .why-card h3 { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; }
+        .why-card p { color: var(--text-muted); font-size: 0.9rem; }
+
+        /* Contact */
+        .contact { padding: 4rem 0; background: linear-gradient(180deg, var(--primary) 0%, #1e3a5f 100%); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; }
+        .contact-info h3 { font-size: 2rem; font-weight: 800; margin-bottom: 1rem; }
+        .contact-info p { color: var(--text-muted); margin-bottom: 2rem; }
+        .contact-methods { display: flex; flex-direction: column; gap: 1rem; }
+        .contact-method { display: flex; align-items: center; gap: 1rem; padding: 1.2rem; background: var(--card); border: 1px solid var(--border); border-radius: 12px; transition: all 0.3s; }
+        .contact-method:hover { border-color: var(--accent); transform: translateX(5px); }
+        .contact-icon { font-size: 1.5rem; }
+        .contact-method div strong { display: block; margin-bottom: 0.2rem; }
+        .contact-method div span { color: var(--text-muted); font-size: 0.9rem; }
+        .contact-form { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: 2rem; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; margin-bottom: 0.4rem; font-weight: 600; font-size: 0.85rem; }
+        .form-group input, .form-group textarea, .form-group select { width: 100%; padding: 0.8rem; background: var(--primary); border: 1px solid var(--border); border-radius: 10px; color: var(--text); font-family: inherit; font-size: 1rem; }
+        .form-group input:focus, .form-group textarea:focus, .form-group select:focus { outline: none; border-color: var(--accent); }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+
+        /* Footer */
+        footer { background: var(--primary-light); border-top: 1px solid var(--border); padding: 3rem 2rem 2rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; }
+        .footer-brand h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; }
+        .footer-brand h3 span { color: var(--accent-glow); }
+        .footer-brand p { color: var(--text-muted); font-size: 0.9rem; }
+        .footer-links h4 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 0.5rem; }
+        .footer-links a { color: var(--text-muted); font-size: 0.9rem; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--accent-glow); }
+        .footer-bottom { max-width: 1200px; margin: 3rem auto 0; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text-dark); font-size: 0.85rem; }
+
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu { display: block; }
+            .hero-cta-group { flex-direction: column; align-items: center; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .footer-content { grid-template-columns: 1fr 1fr; }
+            .value-table { font-size: 0.85rem; }
+            .value-table th, .value-table td { padding: 0.6rem; }
+        }
+        @media (max-width: 480px) {
+            .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+            .footer-content { grid-template-columns: 1fr; }
+            .price { font-size: 2.5rem; }
+        }
+
+        html { scroll-behavior: smooth; }
+        .fade-in { opacity: 0; transform: translateY(30px); transition: all 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">Nexa<span>Flow</span> Digital</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#work">Work</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I'm%20interested%20in%20your%20services" class="nav-cta" target="_blank">💬 WhatsApp</a>
+            <button class="mobile-menu" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex';document.querySelector('.nav-links').style.position='absolute';document.querySelector('.nav-links').style.top='100%';document.querySelector('.nav-links').style.left='0';document.querySelector('.nav-links').style.right='0';document.querySelector('.nav-links').style.background='var(--primary)';document.querySelector('.nav-links').style.flexDirection='column';document.querySelector('.nav-links').style.padding='2rem';document.querySelector('.nav-links').style.borderBottom='1px solid var(--border)';">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">🚀 Chat on WhatsApp</div>
+            <h1>NEXAFLOW <span class="highlight">DIGITAL</span></h1>
+            <p>We architect digital systems for modern businesses — from high-performance websites to intelligent voice agents and automated chat workflows that run 24/7.</p>
+            <div class="hero-cta-group">
+                <a href="#pricing" class="btn-primary">View Packages →</a>
+                <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I'm%20interested%20in%20your%20services" class="btn-secondary" target="_blank">📱 WhatsApp Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Everything you need to digitalize your business</h2>
+                <p>Full-stack digital solutions built for performance. One team, one vision — from pixel-perfect interfaces to AI models in production.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-num">01</div>
+                    <div class="service-icon">🌐</div>
+                    <h3>Website Development</h3>
+                    <p>High-performance, conversion-optimized websites built with React, Next.js, and modern frameworks. Mobile-first, SEO-ready, blazing fast.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-num">02</div>
+                    <div class="service-icon">📞</div>
+                    <h3>AI Calling Agents</h3>
+                    <p>Intelligent voice agents that handle inbound and outbound calls around the clock. Book appointments, qualify leads, serve customers.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-num">03</div>
+                    <div class="service-icon">💬</div>
+                    <h3>WhatsApp Automation</h3>
+                    <p>WhatsApp Business API workflows for support, order updates, marketing campaigns, and lead nurturing at scale.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-num">04</div>
+                    <div class="service-icon">💻</div>
+                    <h3>Web Chat Automation</h3>
+                    <p>Smart chatbots that engage visitors, answer questions, capture leads, and drive conversions in real-time on your website.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-num">05</div>
+                    <div class="service-icon">📱</div>
+                    <h3>Social Chat Automation</h3>
+                    <p>Automated Messenger and Instagram DM workflows to engage social audiences and turn followers into paying customers.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-num">06</div>
+                    <div class="service-icon">🛒</div>
+                    <h3>Shopify Cart Recovery</h3>
+                    <p>Recover lost revenue with automated abandoned cart sequences and intelligent chat flows integrated with your Shopify store.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee">
+        <div class="marquee-content">
+            <span>WEB DEVELOPMENT</span> • <span>AI CALLING AGENTS</span> • <span>WHATSAPP AUTOMATION</span> • <span>SHOPIFY SOLUTIONS</span> • <span>CHAT AUTOMATION</span> • <span>WEB DEVELOPMENT</span> • <span>AI CALLING AGENTS</span> • <span>WHATSAPP AUTOMATION</span> • <span>SHOPIFY SOLUTIONS</span> • <span>CHAT AUTOMATION</span> •
+            <span>WEB DEVELOPMENT</span> • <span>AI CALLING AGENTS</span> • <span>WHATSAPP AUTOMATION</span> • <span>SHOPIFY SOLUTIONS</span> • <span>CHAT AUTOMATION</span> • <span>WEB DEVELOPMENT</span> • <span>AI CALLING AGENTS</span> • <span>WHATSAPP AUTOMATION</span> • <span>SHOPIFY SOLUTIONS</span> • <span>CHAT AUTOMATION</span> •
+        </div>
+    </div>
+
+    <!-- Pricing -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2>Smart Solutions for Every Budget</h2>
+                <p>All packages include a FREE domain name and professional email address.</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3>Basic Package</h3>
+                    <p class="subtitle">5 Pages — Price-sensitive clients</p>
+                    <div class="price">KSH 6,500</div>
+                    <ul class="pricing-features">
+                        <li>Contact form</li>
+                        <li>Image gallery</li>
+                        <li>Social media integration</li>
+                        <li>Responsive design</li>
+                        <li>Professional email setup</li>
+                    </ul>
+                    <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I'm%20interested%20in%20the%20Basic%20Package%20(KSH%206%2C500)" class="pricing-btn" target="_blank">Get Started</a>
+                    <p class="maintenance-note">Annual maintenance: KSH 2,000/year</p>
+                </div>
+
+                <div class="pricing-card popular">
+                    <div class="popular-badge">MOST POPULAR</div>
+                    <h3>Standard Package</h3>
+                    <p class="subtitle">10 Pages — Growing businesses</p>
+                    <div class="price">KSH 12,000</div>
+                    <ul class="pricing-features">
+                        <li>Everything in Basic</li>
+                        <li>Blog setup</li>
+                        <li>Enhanced SEO</li>
+                        <li>Google Business Profile</li>
+                        <li>3 months priority support</li>
+                    </ul>
+                    <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I'm%20interested%20in%20the%20Standard%20Package%20(KSH%2012%2C000)" class="pricing-btn" target="_blank">Get Started</a>
+                    <p class="maintenance-note">Annual maintenance: KSH 2,000/year</p>
+                </div>
+
+                <div class="pricing-card">
+                    <h3>Premium Package</h3>
+                    <p class="subtitle">10+ Pages — Established businesses</p>
+                    <div class="price">KSH 18,000</div>
+                    <ul class="pricing-features">
+                        <li>Everything in Standard</li>
+                        <li>CMS integration</li>
+                        <li>Advanced SEO</li>
+                        <li>Analytics dashboard</li>
+                        <li>6 months priority support</li>
+                    </ul>
+                    <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I'm%20interested%20in%20the%20Premium%20Package%20(KSH%2018%2C000)" class="pricing-btn" target="_blank">Get Started</a>
+                    <p class="maintenance-note">Annual maintenance: KSH 2,000/year</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Added Services -->
+    <section class="value-services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Value-Added Services</h2>
+            </div>
+            <table class="value-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price</th>
+                        <th style="text-align:right">Frequency</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>SEO Setup</td>
+                        <td>KSH 3,000 – 5,000</td>
+                        <td style="text-align:right">One-time</td>
+                    </tr>
+                    <tr>
+                        <td>Content Creation</td>
+                        <td>KSH 1,500 – 3,000</td>
+                        <td style="text-align:right">Per article</td>
+                    </tr>
+                    <tr>
+                        <td>Enhanced Maintenance</td>
+                        <td>KSH 2,500 – 5,000</td>
+                        <td style="text-align:right">Monthly</td>
+                    </tr>
+                    <tr>
+                        <td>Social Media Management</td>
+                        <td>KSH 5,000 – 10,000</td>
+                        <td style="text-align:right">Monthly</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Portfolio -->
+    <section class="portfolio" id="work">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projects that deliver real results</h2>
+                <p>4 Projects</p>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card">
+                    <div class="portfolio-img">🤖</div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-badge">Live Platform</span>
+                        <p style="color:var(--text-dark);font-size:0.8rem;margin-bottom:0.5rem;">No. 01</p>
+                        <h3>WeDialAI</h3>
+                        <p>Full-featured AI agent platform we built and operate. 7-channel communication — voice calls, WhatsApp, Instagram, Facebook, Shopify, web chat. Live at <a href="https://wedialai.com" target="_blank" style="color:var(--accent-glow)">wedialai.com</a>.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-img">👗</div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-badge">+142% conversion</span>
+                        <p style="color:var(--text-dark);font-size:0.8rem;margin-bottom:0.5rem;">No. 02</p>
+                        <h3>Nairobi Fashion Brand</h3>
+                        <p>Full-featured e-commerce with custom catalog, M-Pesa integration, and mobile-first design. Conversion rate doubled in 30 days.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-img">🏪</div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-badge">10K+ customers</span>
+                        <p style="color:var(--text-dark);font-size:0.8rem;margin-bottom:0.5rem;">No. 03</p>
+                        <h3>Local Retail Chain</h3>
+                        <p>End-to-end WhatsApp automation for order confirmations, delivery tracking, and campaigns. Serving 10,000+ customers instantly.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card">
+                    <div class="portfolio-img">🏠</div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-badge">80% calls automated</span>
+                        <p style="color:var(--text-dark);font-size:0.8rem;margin-bottom:0.5rem;">No. 04</p>
+                        <h3>Real Estate Agency</h3>
+                        <p>24/7 AI voice agent handling property inquiries, scheduling viewings, and qualifying leads. Now manages 80% of all inbound calls.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us -->
+    <section class="why-us">
+        <div class="container">
+            <div class="section-header">
+                <h2>Built for results, not just deliverables</h2>
+                <p>We don't just build websites and bots. We engineer complete digital ecosystems that generate revenue while you sleep.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">💰</div>
+                    <h3>Results-First Pricing</h3>
+                    <p>We measure success by revenue generated and hours saved — not just tasks completed. Every project ties back to your bottom line.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🏗️</div>
+                    <h3>Full-Stack In-House</h3>
+                    <p>From UI design to AI model deployment, everything happens under one roof. No handoffs, no delays, no blame-shifting.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🧠</div>
+                    <h3>AI-Native Architecture</h3>
+                    <p>Our systems are built with automation at the core, not bolted on. This means real intelligence, not just rule-based chatbots.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🌍</div>
+                    <h3>Local Market Expertise</h3>
+                    <p>Deep understanding of East African business — M-Pesa integrations, local compliance, and customer behavior patterns.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Trusted by businesses that move fast</h2>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">NexaFlow rebuilt our entire online store. Within the first month, our conversion rate had doubled. The M-Pesa integration alone changed everything for us.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SM</div>
+                        <div>
+                            <div class="testimonial-name">Sarah Mwangi</div>
+                            <div class="testimonial-role">Founder, BrightWave Studios</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">The AI voice agent handles our property inquiries flawlessly. Our team now focuses on closing deals instead of answering the same questions all day.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JO</div>
+                        <div>
+                            <div class="testimonial-name">James Ochieng</div>
+                            <div class="testimonial-role">Director, CloudHaven Digital</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <p class="testimonial-text">We went from manually replying to hundreds of WhatsApp messages to fully automated order tracking and support. Our customers love the instant responses.</p>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AH</div>
+                        <div>
+                            <div class="testimonial-name">Aminah Hassan</div>
+                            <div class="testimonial-role">COO, SparkLine Innovations</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marquee 2 -->
+    <div class="marquee">
+        <div class="marquee-content">
+            <span>WEB DEVELOPMENT</span> • <span>AI CALLING AGENTS</span> • <span>WHATSAPP AUTOMATION</span> • <span>SHOPIFY SOLUTIONS</span> • <span>CHAT AUTOMATION</span> • <span>WEB DEVELOPMENT</span> • <span>AI CALLING AGENTS</span> • <span>WHATSAPP AUTOMATION</span> • <span>SHOPIFY SOLUTIONS</span> • <span>CHAT AUTOMATION</span> •
+            <span>WEB DEVELOPMENT</span> • <span>AI CALLING AGENTS</span> • <span>WHATSAPP AUTOMATION</span> • <span>SHOPIFY SOLUTIONS</span> • <span>CHAT AUTOMATION</span> • <span>WEB DEVELOPMENT</span> • <span>AI CALLING AGENTS</span> • <span>WHATSAPP AUTOMATION</span> • <span>SHOPIFY SOLUTIONS</span> • <span>CHAT AUTOMATION</span> •
+        </div>
+    </div>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Let's Build Something Great</h3>
+                    <p>Ready to digitalize your business? Reach out however works best for you.</p>
+                    <div class="contact-methods">
+                        <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I'm%20interested%20in%20your%20services" class="contact-method" target="_blank">
+                            <div class="contact-icon">💬</div>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <span>+254 106 216 699 — Fastest response</span>
+                            </div>
+                        </a>
+                        <a href="tel:+254106216699" class="contact-method">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <strong>Phone</strong>
+                                <span>+254 106 216 699</span>
+                            </div>
+                        </a>
+                        <a href="mailto:support@wedialai.com" class="contact-method">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <strong>Email</strong>
+                                <span>support@wedialai.com</span>
+                            </div>
+                        </a>
+                        <a href="https://wedialai.com" class="contact-method" target="_blank">
+                            <div class="contact-icon">🤖</div>
+                            <div>
+                                <strong>AI Agent Platform</strong>
+                                <span>wedialai.com — White-label available</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 style="margin-bottom:1.5rem">Send a Message</h3>
+                    <form name="contact" netlify netlify-honeypot="bot-field" data-netlify="true">
+                        <p style="display:none">
+                            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+                        </p>
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" name="name" placeholder="John Doe" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" name="email" placeholder="john@company.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Phone (optional)</label>
+                            <input type="tel" name="phone" placeholder="+254 7XX XXX XXX">
+                        </div>
+                        <div class="form-group">
+                            <label>Service Needed</label>
+                            <select name="service" required>
+                                <option value="">Select...</option>
+                                <option value="website">Website Development</option>
+                                <option value="ai-agents">AI Calling Agents</option>
+                                <option value="whatsapp">WhatsApp Automation</option>
+                                <option value="chat">Web Chat Automation</option>
+                                <option value="shopify">Shopify Solutions</option>
+                                <option value="other">Other / Custom</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="width:100%">Send Message →</button>
+                        <p style="color:var(--text-muted);font-size:0.85rem;margin-top:1rem;text-align:center">We'll reply within 24 hours. Or WhatsApp us for instant replies 💬</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Nexa<span>Flow</span> Digital</h3>
+                <p>Full-stack digital solutions for modern businesses. Based in Nairobi, serving the world.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Web Development</a></li>
+                    <li><a href="#services">AI Agents</a></li>
+                    <li><a href="#services">WhatsApp Automation</a></li>
+                    <li><a href="#services">Shopify Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#work">Our Work</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://wa.me/254106216699" target="_blank">WhatsApp</a></li>
+                    <li><a href="tel:+254106216699">Call Us</a></li>
+                    <li><a href="mailto:support@wedialai.com">Email</a></li>
+                    <li><a href="https://wedialai.com" target="_blank">Wedial AI</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 NexaFlow Digital. All rights reserved. | <a href="privacy.html" style="color:var(--text-dark)">Privacy</a> | <a href="terms.html" style="color:var(--text-dark)">Terms</a> | <a href="cookies.html" style="color:var(--text-dark)">Cookies</a> | <a href="mailto:support@wedialai.com" style="color:var(--text-dark)">support@wedialai.com</a></p>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Popup -->
+    <div id="cookie-popup" style="position:fixed;bottom:0;left:0;right:0;background:var(--card);border-top:1px solid var(--border);padding:1.5rem 2rem;z-index:9999;display:none;box-shadow:0 -10px 40px rgba(0,0,0,0.3);">
+        <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:2rem;flex-wrap:wrap;">
+            <div style="flex:1;min-width:250px;">
+                <p style="color:var(--text-muted);font-size:0.95rem;margin:0;">
+                    <strong style="color:var(--text);">🍪 We use cookies</strong> to improve your experience, analyze site traffic, and serve personalized content. By using our site, you consent to our use of cookies. 
+                    <a href="cookies.html" style="color:var(--accent-glow);">Learn more</a> | 
+                    <a href="privacy.html" style="color:var(--accent-glow);">Privacy Policy</a>
+                </p>
+            </div>
+            <div style="display:flex;gap:0.75rem;flex-shrink:0;">
+                <button onclick="cookieConsent.setConsent('minimal')" style="padding:0.6rem 1.2rem;background:transparent;border:1px solid var(--border);border-radius:8px;color:var(--text-muted);cursor:pointer;font-size:0.85rem;font-family:inherit;">Essential Only</button>
+                <button onclick="cookieConsent.setConsent('all')" style="padding:0.6rem 1.2rem;background:linear-gradient(135deg,var(--accent),var(--accent-glow));border:none;border-radius:8px;color:white;cursor:pointer;font-size:0.85rem;font-family:inherit;font-weight:600;">Accept All</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Scroll animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.service-card, .pricing-card, .portfolio-card, .testimonial-card, .why-card').forEach(el => {
+            el.classList.add('fade-in'); observer.observe(el);
+        });
+
+        // Cookie Consent
+        const cookieConsent = {
+            check: function() {
+                const consent = localStorage.getItem('cookie_consent');
+                if (!consent) {
+                    document.getElementById('cookie-popup').style.display = 'block';
+                }
+            },
+            setConsent: function(type) {
+                localStorage.setItem('cookie_consent', type);
+                localStorage.setItem('cookie_consent_date', new Date().toISOString());
+                document.getElementById('cookie-popup').style.display = 'none';
+                if (type === 'all') {
+                    // Load analytics scripts here if needed
+                    console.log('All cookies accepted');
+                } else {
+                    console.log('Essential cookies only');
+                }
+            }
+        };
+        // Check on load
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', cookieConsent.check);
+        } else {
+            cookieConsent.check();
+        }
+    </script>
+</body>
+</html>
