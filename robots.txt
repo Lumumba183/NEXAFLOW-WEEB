@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://nexaflow-digital.netlify.app/sitemap.xml
