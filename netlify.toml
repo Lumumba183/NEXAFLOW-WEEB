@@ -1,3 +1,3 @@
 [build]
-  command = "echo 'Static HTML site — no build step needed'"
-  publish = "."
+  command = "mkdir -p dist && cp *.html dist/ && cp robots.txt dist/ && cp sitemap.xml dist/"
+  publish = "dist"
