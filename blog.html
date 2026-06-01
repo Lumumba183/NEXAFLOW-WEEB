@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — NexaFlow Digital | Web Design, AI & Automation in Kenya</title>
+    <meta name="description" content="Expert insights on web design, AI agents, WhatsApp automation, and digital marketing for Kenyan businesses. Tips, guides, and case studies from NexaFlow Digital.">
+    <link rel="canonical" href="https://nexaflow-digital.com/blog.html">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a0f1a;
+            --primary-light: #111827;
+            --accent: #3b82f6;
+            --accent-glow: #60a5fa;
+            --gold: #c9a227;
+            --gold-bright: #e8c547;
+            --gold-pale: #f5e6a3;
+            --gold-dark: #8a6d1f;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-dark: #64748b;
+            --success: #10b981;
+            --border: #334155;
+            --card: #1e293b;
+            --font-display: 'Playfair Display', serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--primary); color: var(--text); line-height: 1.6; }
+        a { color: inherit; text-decoration: none; }
+        /* Nav */
+        nav { position: fixed; top: 0; width: 100%; background: rgba(10,15,26,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); z-index: 1000; padding: 1rem 0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; font-family: var(--font-display); }
+        .logo span { color: var(--gold-bright); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text-muted); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-links a.active { color: var(--gold-bright); }
+        .nav-cta { background: linear-gradient(135deg, var(--gold), var(--gold-bright)); color: var(--primary); padding: 0.6rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; }
+        .nav-cta:hover { background: linear-gradient(135deg, var(--gold-bright), var(--gold-pale)); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(201,162,39,0.3); }
+        .mobile-menu { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+        /* Hero */
+        .hero { padding: 8rem 2rem 4rem; text-align: center; background: linear-gradient(135deg, var(--primary) 0%, #0f1a2e 100%); }
+        .hero h1 { font-size: clamp(2rem,4vw,3rem); font-weight: 700; margin-bottom: 1rem; font-family: var(--font-display); background: linear-gradient(135deg, var(--gold-bright) 0%, #ffffff 40%, var(--gold-pale) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { color: var(--text-muted); font-size: 1.1rem; max-width: 600px; margin: 0 auto; }
+        /* Blog Grid */
+        .blog-section { padding: 2rem 0 4rem; max-width: 1200px; margin: 0 auto; padding-left: 2rem; padding-right: 2rem; }
+        .blog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; margin-top: 3rem; }
+        .blog-card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; transition: all 0.3s; }
+        .blog-card:hover { transform: translateY(-5px); border-color: rgba(201,162,39,0.3); box-shadow: 0 20px 60px rgba(0,0,0,0.3); }
+        .blog-img { width: 100%; height: 200px; overflow: hidden; }
+        .blog-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+        .blog-card:hover .blog-img img { transform: scale(1.05); }
+        .blog-content { padding: 1.5rem; }
+        .blog-category { display: inline-block; background: rgba(201,162,39,0.15); color: var(--gold-bright); padding: 0.3rem 0.8rem; border-radius: 50px; font-size: 0.75rem; font-weight: 600; margin-bottom: 0.75rem; }
+        .blog-content h2 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.75rem; line-height: 1.4; }
+        .blog-content h2 a { color: var(--text); transition: color 0.3s; }
+        .blog-content h2 a:hover { color: var(--gold-bright); }
+        .blog-excerpt { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.6; }
+        .blog-meta { display: flex; align-items: center; gap: 1rem; color: var(--text-dark); font-size: 0.8rem; }
+        .blog-meta span { display: flex; align-items: center; gap: 0.3rem; }
+        /* Footer */
+        footer { background: var(--primary-light); border-top: 1px solid var(--border); padding: 3rem 2rem 2rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; }
+        .footer-brand h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; font-family: var(--font-display); }
+        .footer-brand h3 span { color: var(--gold-bright); }
+        .footer-brand p { color: var(--text-muted); font-size: 0.9rem; }
+        .footer-links h4 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 0.5rem; }
+        .footer-links a { color: var(--text-muted); font-size: 0.9rem; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--gold-bright); }
+        .footer-bottom { max-width: 1200px; margin: 3rem auto 0; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text-dark); font-size: 0.85rem; }
+        /* Mobile */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .mobile-menu { display: block; }
+            .footer-content { grid-template-columns: 1fr 1fr; }
+        }
+        @media (max-width: 480px) {
+            .footer-content { grid-template-columns: 1fr; }
+        }
+        html { scroll-behavior: smooth; }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Nexa<span>Flow</span> Digital</a>
+            <ul class="nav-links">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#work">Work</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I'm%20interested%20in%20your%20services" class="nav-cta" target="_blank">💬 WhatsApp</a>
+            <button class="mobile-menu" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex';document.querySelector('.nav-links').style.position='absolute';document.querySelector('.nav-links').style.top='100%';document.querySelector('.nav-links').style.left='0';document.querySelector('.nav-links').style.right='0';document.querySelector('.nav-links').style.background='var(--primary)';document.querySelector('.nav-links').style.flexDirection='column';document.querySelector('.nav-links').style.padding='2rem';document.querySelector('.nav-links').style.borderBottom='1px solid var(--border)';">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>NexaFlow Blog</h1>
+        <p>Expert insights on web design, AI agents, WhatsApp automation, and digital marketing for Kenyan businesses. Tips, guides, and real results.</p>
+    </section>
+
+    <section class="blog-section">
+        <div class="blog-grid">
+
+            <article class="blog-card">
+                <div class="blog-img">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop&auto=format&q=80" alt="Website pricing in Kenya" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category">Website Design</span>
+                    <h2><a href="blog/website-cost-kenya-2026.html">How Much Does a Website Cost in Kenya? (2026 Pricing Guide)</a></h2>
+                    <p class="blog-excerpt">Everything you need to know about website pricing in Kenya. From KSH 6,500 basic sites to KSH 18,000 premium packages. Includes what's included, hidden costs, and how to choose the right package for your business.</p>
+                    <div class="blog-meta">
+                        <span>📅 June 1, 2026</span>
+                        <span>⏱️ 8 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-img">
+                    <img src="https://images.unsplash.com/photo-1516321318423-f77f0f3b0b9e?w=600&h=400&fit=crop&auto=format&q=80" alt="WhatsApp automation for businesses" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category">WhatsApp Automation</span>
+                    <h2><a href="blog/whatsapp-automation-kenya.html">5 Reasons Your Kenyan Business Needs WhatsApp Automation in 2026</a></h2>
+                    <p class="blog-excerpt">Over 90% of Kenyans use WhatsApp. Learn how automated WhatsApp messages can handle orders, send delivery updates, and recover abandoned carts — all while you sleep. Real case studies included.</p>
+                    <div class="blog-meta">
+                        <span>📅 June 1, 2026</span>
+                        <span>⏱️ 6 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-img">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop&auto=format&q=80" alt="AI chatbots for Kenyan businesses" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category">AI Agents</span>
+                    <h2><a href="blog/ai-chatbots-kenya.html">AI Chatbots vs Human Support: What's Better for Kenyan Businesses?</a></h2>
+                    <p class="blog-excerpt">Should your business use AI chatbots or stick with human support? We compare costs, response times, customer satisfaction, and scalability for the Kenyan market. Includes real data from businesses we serve.</p>
+                    <div class="blog-meta">
+                        <span>📅 June 1, 2026</span>
+                        <span>⏱️ 7 min read</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-img">
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?w=600&h=400&fit=crop&auto=format&q=80" alt="Shopify vs WooCommerce for Kenya" loading="lazy">
+                </div>
+                <div class="blog-content">
+                    <span class="blog-category">E-commerce</span>
+                    <h2><a href="blog/shopify-vs-woocommerce-kenya.html">Shopify vs WooCommerce: Best E-commerce Platform for Kenya in 2026</a></h2>
+                    <p class="blog-excerpt">Comparing the two biggest e-commerce platforms for Kenyan businesses. M-Pesa integration, pricing in KSH, shipping logistics, and which one is easier to manage. Plus: our recommendation based on 50+ Kenyan stores.</p>
+                    <div class="blog-meta">
+                        <span>📅 June 1, 2026</span>
+                        <span>⏱️ 9 min read</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Nexa<span>Flow</span> Digital</h3>
+                <p>Full-stack digital solutions for modern businesses. Based in Nairobi, serving the world.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="index.html#services">Web Development</a></li>
+                    <li><a href="index.html#services">AI Agents</a></li>
+                    <li><a href="index.html#services">WhatsApp Automation</a></li>
+                    <li><a href="index.html#services">Shopify Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#work">Our Work</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://wa.me/254106216699" target="_blank">WhatsApp</a></li>
+                    <li><a href="tel:+254106216699">Call Us</a></li>
+                    <li><a href="mailto:support@wedialai.com">Email</a></li>
+                    <li><a href="https://wedialai.com" target="_blank">Wedial AI</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 NexaFlow Digital. All rights reserved. | <a href="privacy.html" style="color:var(--text-dark)">Privacy</a> | <a href="terms.html" style="color:var(--text-dark)">Terms</a> | <a href="cookies.html" style="color:var(--text-dark)">Cookies</a></p>
+        </div>
+    </footer>
+
+</body>
+</html>

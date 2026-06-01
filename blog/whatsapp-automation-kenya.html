@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5 Reasons Your Kenyan Business Needs WhatsApp Automation — NexaFlow Digital</title>
+    <meta name="description" content="Over 90% of Kenyans use WhatsApp. Learn how automated WhatsApp messages can handle orders, send delivery updates, and recover abandoned carts. Real case studies included.">
+    <link rel="canonical" href="https://nexaflow-digital.com/blog/whatsapp-automation-kenya.html">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0a0f1a;
+            --primary-light: #111827;
+            --accent: #3b82f6;
+            --accent-glow: #60a5fa;
+            --gold: #c9a227;
+            --gold-bright: #e8c547;
+            --gold-pale: #f5e6a3;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --text-dark: #64748b;
+            --border: #334155;
+            --card: #1e293b;
+            --font-display: 'Playfair Display', serif;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--primary); color: var(--text); line-height: 1.7; }
+        a { color: var(--gold-bright); transition: color 0.3s; }
+        a:hover { color: var(--gold-pale); }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(10,15,26,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); z-index: 1000; padding: 1rem 0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; font-family: var(--font-display); }
+        .logo span { color: var(--gold-bright); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text-muted); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; text-decoration: none; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-links a.active { color: var(--gold-bright); }
+        .nav-cta { background: linear-gradient(135deg, var(--gold), var(--gold-bright)); color: var(--primary); padding: 0.6rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; text-decoration: none; }
+        .nav-cta:hover { background: linear-gradient(135deg, var(--gold-bright), var(--gold-pale)); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(201,162,39,0.3); }
+        .mobile-menu { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+        .article-container { max-width: 800px; margin: 0 auto; padding: 8rem 2rem 4rem; }
+        .breadcrumb { color: var(--text-dark); font-size: 0.85rem; margin-bottom: 1.5rem; }
+        .breadcrumb a { color: var(--text-dark); text-decoration: none; }
+        .breadcrumb a:hover { color: var(--gold-bright); }
+        .article-header h1 { font-size: clamp(1.8rem,4vw,2.5rem); font-weight: 700; line-height: 1.2; margin-bottom: 1rem; font-family: var(--font-display); background: linear-gradient(135deg, var(--gold-bright) 0%, #ffffff 40%, var(--gold-pale) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .article-meta { display: flex; align-items: center; gap: 1.5rem; color: var(--text-dark); font-size: 0.9rem; margin-bottom: 2rem; flex-wrap: wrap; }
+        .article-meta span { display: flex; align-items: center; gap: 0.4rem; }
+        .article-hero-img { width: 100%; height: 300px; border-radius: 16px; overflow: hidden; margin-bottom: 2rem; }
+        .article-hero-img img { width: 100%; height: 100%; object-fit: cover; }
+        .article-body h2 { font-size: 1.5rem; font-weight: 700; margin: 2.5rem 0 1rem; color: var(--gold-bright); font-family: var(--font-display); }
+        .article-body h3 { font-size: 1.2rem; font-weight: 600; margin: 2rem 0 0.75rem; color: var(--text); }
+        .article-body p { color: var(--text-muted); margin-bottom: 1.2rem; font-size: 1.05rem; }
+        .article-body ul, .article-body ol { color: var(--text-muted); margin-left: 1.5rem; margin-bottom: 1.2rem; }
+        .article-body li { margin-bottom: 0.6rem; }
+        .article-body strong { color: var(--text); }
+        .highlight-box { background: rgba(201,162,39,0.08); border: 1px solid rgba(201,162,39,0.2); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+        .highlight-box h3 { color: var(--gold-bright); margin-top: 0; }
+        .cta-box { background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(201,162,39,0.1)); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; text-align: center; margin: 2.5rem 0; }
+        .cta-box h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; font-family: var(--font-display); }
+        .cta-box p { color: var(--text-muted); margin-bottom: 1.5rem; }
+        .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-bright)); color: var(--primary); padding: 1rem 2rem; border-radius: 12px; font-weight: 700; font-size: 1rem; display: inline-block; text-decoration: none; transition: all 0.3s; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,162,39,0.3); }
+        .faq-section { margin-top: 3rem; }
+        .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
+        .faq-item h3 { color: var(--gold-bright); margin-top: 0; margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .faq-item p { margin-bottom: 0; }
+        .share-bar { display: flex; gap: 1rem; margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+        .share-bar a { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.6rem 1.2rem; background: var(--card); border: 1px solid var(--border); border-radius: 8px; color: var(--text-muted); font-size: 0.85rem; text-decoration: none; transition: all 0.3s; }
+        .share-bar a:hover { border-color: var(--gold); color: var(--gold-bright); }
+        .related-posts { margin-top: 4rem; padding-top: 2rem; border-top: 1px solid var(--border); }
+        .related-posts h3 { font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; font-family: var(--font-display); }
+        .related-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+        .related-card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; transition: all 0.3s; }
+        .related-card:hover { border-color: rgba(201,162,39,0.3); }
+        .related-card a { color: var(--text); font-weight: 600; text-decoration: none; }
+        .related-card a:hover { color: var(--gold-bright); }
+        .related-card p { color: var(--text-dark); font-size: 0.85rem; margin-top: 0.5rem; }
+        footer { background: var(--primary-light); border-top: 1px solid var(--border); padding: 3rem 2rem 2rem; margin-top: 4rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; }
+        .footer-brand h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; font-family: var(--font-display); }
+        .footer-brand h3 span { color: var(--gold-bright); }
+        .footer-brand p { color: var(--text-muted); font-size: 0.9rem; }
+        .footer-links h4 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 0.5rem; }
+        .footer-links a { color: var(--text-muted); font-size: 0.9rem; transition: color 0.3s; text-decoration: none; }
+        .footer-links a:hover { color: var(--gold-bright); }
+        .footer-bottom { max-width: 1200px; margin: 3rem auto 0; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text-dark); font-size: 0.85rem; }
+        @media (max-width: 768px) { .nav-links { display: none; } .mobile-menu { display: block; } .footer-content { grid-template-columns: 1fr 1fr; } .article-container { padding: 7rem 1.5rem 3rem; } }
+        @media (max-width: 480px) { .footer-content { grid-template-columns: 1fr; } }
+        body::before { content: ''; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; opacity: 0.03; }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "5 Reasons Your Kenyan Business Needs WhatsApp Automation in 2026",
+      "description": "Over 90% of Kenyans use WhatsApp. Learn how automated WhatsApp messages can handle orders, send delivery updates, and recover abandoned carts.",
+      "author": { "@type": "Organization", "name": "NexaFlow Digital", "url": "https://nexaflow-digital.com" },
+      "publisher": { "@type": "Organization", "name": "NexaFlow Digital", "logo": { "@type": "ImageObject", "url": "https://nexaflow-digital.com/logo.png" } },
+      "datePublished": "2026-06-01", "dateModified": "2026-06-01",
+      "mainEntityOfPage": { "@type": "WebPage", "@id": "https://nexaflow-digital.com/blog/whatsapp-automation-kenya.html" }
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="../index.html" class="logo">Nexa<span>Flow</span> Digital</a>
+            <ul class="nav-links">
+                <li><a href="../index.html#services">Services</a></li>
+                <li><a href="../index.html#pricing">Pricing</a></li>
+                <li><a href="../index.html#work">Work</a></li>
+                <li><a href="../blog.html" class="active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I%20want%20WhatsApp%20automation" class="nav-cta" target="_blank">💬 WhatsApp</a>
+            <button class="mobile-menu" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex';document.querySelector('.nav-links').style.position='absolute';document.querySelector('.nav-links').style.top='100%';document.querySelector('.nav-links').style.left='0';document.querySelector('.nav-links').style.right='0';document.querySelector('.nav-links').style.background='var(--primary)';document.querySelector('.nav-links').style.flexDirection='column';document.querySelector('.nav-links').style.padding='2rem';document.querySelector('.nav-links').style.borderBottom='1px solid var(--border)';">☰</button>
+        </div>
+    </nav>
+
+    <div class="article-container">
+        <div class="breadcrumb">
+            <a href="../index.html">Home</a> › <a href="../blog.html">Blog</a> › WhatsApp Automation
+        </div>
+
+        <header class="article-header">
+            <h1>5 Reasons Your Kenyan Business Needs WhatsApp Automation in 2026</h1>
+            <div class="article-meta">
+                <span>👤 NexaFlow Digital Team</span>
+                <span>📅 June 1, 2026</span>
+                <span>⏱️ 6 min read</span>
+                <span>🏷️ WhatsApp Automation</span>
+            </div>
+        </header>
+
+        <div class="article-hero-img">
+            <img src="https://images.unsplash.com/photo-1516321318423-f77f0f3b0b9e?w=800&h=400&fit=crop&auto=format&q=80" alt="WhatsApp automation for Kenyan businesses" loading="lazy">
+        </div>
+
+        <div class="article-body">
+            <p><strong>WhatsApp is Kenya's most popular messaging app.</strong> Over 90% of Kenyan smartphone users have WhatsApp installed. While email open rates hover around 20%, WhatsApp messages are opened by over 95% of recipients within 3 minutes. If your business isn't using WhatsApp automation in 2026, you're leaving money on the table.</p>
+
+            <p>At <a href="../index.html">NexaFlow Digital</a>, we've built WhatsApp automation systems for retail stores, restaurants, salons, and e-commerce brands across Kenya. The results are consistently remarkable. Here's why every Kenyan business should implement WhatsApp automation — and how to get started.</p>
+
+            <h2>1. Instant Customer Communication (No More Missed Messages)</h2>
+
+            <p>How many times have you missed a customer inquiry because you were busy, offline, or simply overwhelmed? In Kenya's competitive market, a slow response is often a lost sale.</p>
+
+            <p><strong>WhatsApp automation solves this completely.</strong> An automated system can:</p>
+            <ul>
+                <li>Respond to customer inquiries instantly, 24/7</li>
+                <li>Answer common questions (pricing, hours, location, services)</li>
+                <li>Route complex queries to the right team member</li>
+                <li>Send confirmation messages automatically after every interaction</li>
+            </ul>
+
+            <p>A local retail chain we worked with was manually replying to 200+ WhatsApp messages daily. After implementing automation, <strong>90% of inquiries were handled without human intervention</strong>, and customer satisfaction scores jumped from 72% to 94%.</p>
+
+            <h2>2. Automated Order Processing (Work While You Sleep)</h2>
+
+            <p>Kenyan businesses often operate outside standard hours. A customer might message your bakery at 6 AM asking about today's specials, or your electronics shop at 10 PM about TV availability. With WhatsApp automation, you never miss an opportunity.</p>
+
+            <p><strong>Here's what an automated order flow looks like:</strong></p>
+            <ol>
+                <li>Customer sends "Menu" or "Catalog"</li>
+                <li>Bot sends full product catalog with prices in KES</li>
+                <li>Customer selects items and quantities</li>
+                <li>Bot calculates total including delivery fee</li>
+                <li>Customer confirms and receives M-Pesa payment prompt</li>
+                <li>Bot sends order confirmation and estimated delivery time</li>
+                <li>Business owner receives order summary on their phone</li>
+            </ol>
+
+            <p>A Nairobi fashion brand we automated now processes <strong>60% of their orders entirely through WhatsApp</strong> — from inquiry to payment to delivery tracking — without any staff intervention.</p>
+
+            <h2>3. Abandoned Cart Recovery (Recapture Lost Revenue)</h2>
+
+            <p>Cart abandonment is the biggest revenue leak for Kenyan e-commerce stores. On average, 70% of online shoppers add items to cart but never complete checkout. The #1 reason? Forgotten carts or distraction.</p>
+
+            <p><strong>WhatsApp automation recovers this revenue by:</strong></p>
+            <ul>
+                <li>Sending a friendly reminder 1 hour after cart abandonment</li>
+                <li>Offering a 10% discount code 24 hours later</li>
+                <li>Sending a final "last chance" message 3 days later</li>
+                <li>Including a direct M-Pesa checkout link in every message</li>
+            </ul>
+
+            <p>A Shopify store we integrated with WhatsApp automation saw a <strong>35% recovery rate on abandoned carts</strong> — adding KSH 150,000+ in monthly revenue with zero additional ad spend.</p>
+
+            <h2>4. Delivery Updates & Post-Purchase Support (Build Trust)</h2>
+
+            <p>Delivery anxiety is real in Kenya. Customers want to know: Has my order been packed? When will it ship? Is it out for delivery? Has it arrived?</p>
+
+            <p><strong>WhatsApp automation handles the entire post-purchase experience:</strong></p>
+            <ul>
+                <li>Order confirmation with receipt and tracking number</li>
+                <li>"Your order has been shipped" with estimated delivery time</li>
+                <li>"Out for delivery" with rider's contact number</li>
+                <li>"Delivered" confirmation with delivery proof photo</li>
+                <li>Follow-up 3 days later: "How was your experience? Leave a review?"</li>
+            </ul>
+
+            <p>This level of proactive communication is rare in Kenya. Customers notice and remember. One of our clients, a local electronics dealer, told us that <strong>repeat purchase rate increased by 28%</strong> after implementing automated delivery updates.</p>
+
+            <h2>5. Cost Savings (Scale Without Hiring)</h2>
+
+            <p>Let's talk numbers. A full-time customer service agent in Kenya costs:</p>
+            <ul>
+                <li>Salary: KSH 20,000–40,000/month</li>
+                <li>Office space, equipment, internet: KSH 10,000+/month</li>
+                <li>Training, turnover, management: KSH 5,000+/month</li>
+                <li><strong>Total: KSH 35,000–55,000/month per agent</strong></li>
+            </ul>
+
+            <p>A WhatsApp automation system from NexaFlow Digital costs:</p>
+            <ul>
+                <li>Setup: KSH 15,000–30,000 (one-time)</li>
+                <li>Monthly platform fee: KSH 3,000–8,000</li>
+                <li><strong>Monthly savings: KSH 30,000+ per agent replaced</strong></li>
+            </ul>
+
+            <p>And the automation handles 24/7, never takes sick days, speaks every language, and can chat with 1,000 customers simultaneously. A human agent can manage 3–5 conversations at best.</p>
+
+            <div class="highlight-box">
+                <h3>💡 The Math for a Typical Kenyan Business</h3>
+                <p><strong>Before automation:</strong> 2 agents × KSH 35,000 = KSH 70,000/month<br>
+                <strong>After automation:</strong> 1 agent + automation = KSH 35,000 + KSH 5,000 = KSH 40,000/month<br>
+                <strong>Monthly savings:</strong> KSH 30,000<br>
+                <strong>Annual savings:</strong> KSH 360,000</p>
+            </div>
+
+            <h2>How WhatsApp Business API Works in Kenya</h2>
+
+            <p>WhatsApp offers two products for businesses:</p>
+
+            <h3>WhatsApp Business App (Free, Limited)</h3>
+            <p>Good for small businesses with under 1,000 customers. Has basic greeting messages, away messages, and quick replies. No automation, no bulk messaging, no integration with Shopify or other systems.</p>
+
+            <h3>WhatsApp Business API (Paid, Powerful)</h3>
+            <p>Built for scaling businesses. Requires a verified Facebook Business Manager account and a Business Solution Provider (BSP) like NexaFlow Digital. Features include:</p>
+            <ul>
+                <li>Broadcast messages to up to 100,000 contacts per day</li>
+                <li>Automated chatbots with AI-powered responses</li>
+                <li>Integration with Shopify, WooCommerce, CRM systems</li>
+                <li>Multi-agent shared inbox with role-based access</li>
+                <li>Rich media messages (images, PDFs, videos, location)</li>
+                <li>Templates for order confirmations, shipping updates, reminders</li>
+                <li>Analytics dashboard with delivery, read, and reply rates</li>
+            </ul>
+
+            <p><strong>WhatsApp API pricing in Kenya:</strong> Conversations are charged per 24-hour session (not per message). Rates are approximately KSH 3–8 per conversation depending on the BSP. A "conversation" is a 24-hour chat window with a customer.</p>
+
+            <h2>Getting Started with WhatsApp Automation</h2>
+
+            <p>Here's our recommended process:</p>
+
+            <h3>Step 1: Define Your Use Case</h3>
+            <p>What do you want to automate? Common starting points: order confirmations, delivery updates, appointment reminders, abandoned cart recovery, FAQ responses.</p>
+
+            <h3>Step 2: Choose Your Platform</h3>
+            <p>We build custom WhatsApp automation workflows using the WhatsApp Business API. For simpler needs, we also work with Twilio, MessageBird, or Wati. The choice depends on your budget, volume, and integration needs.</p>
+
+            <h3>Step 3: Set Up Your WhatsApp Business API</h3>
+            <p>This requires a verified Meta Business account, a phone number for WhatsApp, and approval from Meta. We handle the entire setup for you.</p>
+
+            <h3>Step 4: Build Your Automation Flows</h3>
+            <p>We map out every customer interaction and create automated responses. This includes welcome messages, menu options, error handling, and human handoffs.</p>
+
+            <h3>Step 5: Test, Launch, Optimize</h3>
+            <p>We test with your team before going live. After launch, we monitor metrics and adjust flows based on real customer interactions.</p>
+
+            <div class="cta-box">
+                <h3>Ready to Automate Your WhatsApp?</h3>
+                <p>We've built WhatsApp automation for 50+ Kenyan businesses. From small salons to retail chains with 10,000+ customers. Let's talk about your specific needs.</p>
+                <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I%20want%20to%20automate%20WhatsApp%20for%20my%20business" class="btn-primary" target="_blank">💬 Get a Free WhatsApp Automation Quote</a>
+            </div>
+
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <h3>Is WhatsApp Business API free in Kenya?</h3>
+                    <p>No, the WhatsApp Business API is a paid service. You pay per "conversation" (a 24-hour chat window) at approximately KSH 3–8 per conversation. However, the free WhatsApp Business App is available for very small businesses. At NexaFlow, we include platform setup in our automation packages.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can I use my existing phone number for WhatsApp Business API?</h3>
+                    <p>Yes, but the number must not already be registered with the regular WhatsApp or WhatsApp Business App. You'll need a dedicated business number. Alternatively, you can use a new number specifically for your WhatsApp Business API account.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How long does it take to set up WhatsApp automation?</h3>
+                    <p>Meta approval typically takes 1–3 business days. Once approved, we can build and deploy basic automation flows in 3–5 days. Complex integrations (Shopify, custom CRM) take 1–2 weeks.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Can WhatsApp automation handle M-Pesa payments?</h3>
+                    <p>WhatsApp itself doesn't process payments, but we can integrate M-Pesa seamlessly. The bot sends a payment link or prompt, and the customer completes the transaction on their phone. After payment, the bot confirms and proceeds with order fulfillment.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="share-bar">
+            <a href="https://wa.me/?text=Check%20out%20this%20WhatsApp%20automation%20guide%20for%20Kenya%3A%20https://nexaflow-digital.com/blog/whatsapp-automation-kenya.html" target="_blank">📱 Share on WhatsApp</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://nexaflow-digital.com/blog/whatsapp-automation-kenya.html" target="_blank">📘 Share on Facebook</a>
+            <a href="https://twitter.com/intent/tweet?url=https://nexaflow-digital.com/blog/whatsapp-automation-kenya.html&text=Why%20every%20Kenyan%20business%20needs%20WhatsApp%20automation" target="_blank">🐦 Share on Twitter</a>
+        </div>
+
+        <div class="related-posts">
+            <h3>Related Articles</h3>
+            <div class="related-grid">
+                <div class="related-card">
+                    <a href="website-cost-kenya-2026.html">How Much Does a Website Cost in Kenya?</a>
+                    <p>Complete pricing guide from KSH 6,500 to KSH 18,000.</p>
+                </div>
+                <div class="related-card">
+                    <a href="shopify-vs-woocommerce-kenya.html">Shopify vs WooCommerce for Kenya</a>
+                    <p>Best e-commerce platform for Kenyan businesses with M-Pesa.</p>
+                </div>
+                <div class="related-card">
+                    <a href="ai-chatbots-kenya.html">AI Chatbots vs Human Support</a>
+                    <p>What's better for Kenyan businesses? Real data and costs.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Nexa<span>Flow</span> Digital</h3>
+                <p>Full-stack digital solutions for modern businesses. Based in Nairobi, serving the world.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="../index.html#services">Web Development</a></li>
+                    <li><a href="../index.html#services">AI Agents</a></li>
+                    <li><a href="../index.html#services">WhatsApp Automation</a></li>
+                    <li><a href="../index.html#services">Shopify Solutions</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="../index.html#pricing">Pricing</a></li>
+                    <li><a href="../index.html#work">Our Work</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://wa.me/254106216699" target="_blank">WhatsApp</a></li>
+                    <li><a href="tel:+254106216699">Call Us</a></li>
+                    <li><a href="mailto:support@wedialai.com">Email</a></li>
+                    <li><a href="https://wedialai.com" target="_blank">Wedial AI</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 NexaFlow Digital. All rights reserved. | <a href="../privacy.html" style="color:var(--text-dark)">Privacy</a> | <a href="../terms.html" style="color:var(--text-dark)">Terms</a> | <a href="../cookies.html" style="color:var(--text-dark)">Cookies</a></p>
+        </div>
+    </footer>
+</body>
+</html>
