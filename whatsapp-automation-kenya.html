@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Automation Kenya — Business Messaging Automation | NexaFlow Digital</title>
+    <meta name="description" content="WhatsApp automation for Kenyan businesses. Automated messages, order updates, abandoned cart recovery, and customer support. 24/7. Based in Nairobi, serving all of Kenya.">
+    <link rel="canonical" href="https://nexaflow-digital.com/whatsapp-automation-kenya.html">
+    <meta property="og:title" content="WhatsApp Automation Kenya — Business Messaging Automation">
+    <meta property="og:description" content="WhatsApp automation for Kenyan businesses. Automated messages, order updates, and customer support.">
+    <meta property="og:url" content="https://nexaflow-digital.com/whatsapp-automation-kenya.html">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0a0f1a; --primary-light: #111827; --accent: #3b82f6; --accent-glow: #60a5fa; --gold: #c9a227; --gold-bright: #e8c547; --gold-pale: #f5e6a3; --text: #f8fafc; --text-muted: #94a3b8; --text-dark: #64748b; --border: #334155; --card: #1e293b; --success: #10b981; --font-display: 'Playfair Display', serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--primary); color: var(--text); line-height: 1.7; }
+        a { color: var(--gold-bright); transition: color 0.3s; text-decoration: none; }
+        a:hover { color: var(--gold-pale); }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(10,15,26,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); z-index: 1000; padding: 1rem 0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; font-family: var(--font-display); }
+        .logo span { color: var(--gold-bright); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text-muted); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta { background: linear-gradient(135deg, var(--gold), var(--gold-bright)); color: var(--primary); padding: 0.6rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; }
+        .nav-cta:hover { background: linear-gradient(135deg, var(--gold-bright), var(--gold-pale)); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(201,162,39,0.3); }
+        .mobile-menu { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+        .hero { padding: 8rem 2rem 4rem; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; font-family: var(--font-display); background: linear-gradient(135deg, var(--gold-bright) 0%, #ffffff 50%, var(--gold-pale) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem; }
+        .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-bright)); color: var(--primary); padding: 1rem 2rem; border-radius: 12px; font-weight: 700; font-size: 1rem; display: inline-block; transition: all 0.3s; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,162,39,0.3); }
+        .section { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+        .section h2 { font-size: 2rem; font-weight: 700; margin-bottom: 2rem; text-align: center; font-family: var(--font-display); color: var(--gold-bright); }
+        .section h3 { font-size: 1.3rem; font-weight: 600; margin: 2rem 0 1rem; color: var(--text); }
+        .section p { color: var(--text-muted); margin-bottom: 1rem; }
+        .section ul { color: var(--text-muted); margin-left: 1.5rem; margin-bottom: 1rem; }
+        .section li { margin-bottom: 0.6rem; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; }
+        .card h3 { color: var(--gold-bright); margin-top: 0; font-family: var(--font-display); }
+        .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
+        .faq-item h3 { color: var(--gold-bright); margin-top: 0; margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .faq-item p { margin-bottom: 0; }
+        .cta-box { background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(201,162,39,0.1)); border: 1px solid var(--border); border-radius: 16px; padding: 3rem; text-align: center; margin: 2rem 0; }
+        .cta-box h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .cta-box p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .badge { display: inline-block; background: rgba(16,185,129,0.1); color: var(--success); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; }
+        .highlight-box { background: rgba(201,162,39,0.08); border: 1px solid rgba(201,162,39,0.2); border-radius: 12px; padding: 1.5rem; margin: 1.5rem 0; }
+        .highlight-box h3 { color: var(--gold-bright); margin-top: 0; }
+        footer { background: var(--primary-light); border-top: 1px solid var(--border); padding: 3rem 2rem 2rem; margin-top: 4rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; }
+        .footer-brand h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; font-family: var(--font-display); }
+        .footer-brand h3 span { color: var(--gold-bright); }
+        .footer-brand p { color: var(--text-muted); font-size: 0.9rem; }
+        .footer-links h4 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 0.5rem; }
+        .footer-links a { color: var(--text-muted); font-size: 0.9rem; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--gold-bright); }
+        .footer-bottom { max-width: 1200px; margin: 3rem auto 0; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text-dark); font-size: 0.85rem; }
+        @media (max-width: 768px) { .nav-links { display: none; } .mobile-menu { display: block; } .footer-content { grid-template-columns: 1fr 1fr; } .hero { padding: 7rem 1.5rem 3rem; } }
+        @media (max-width: 480px) { .footer-content { grid-template-columns: 1fr; } }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "WhatsApp Automation",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "NexaFlow Digital",
+        "address": { "@type": "PostalAddress", "addressCountry": "KE", "addressLocality": "Nairobi" },
+        "telephone": "+254106216699",
+        "url": "https://nexaflow-digital.com"
+      },
+      "areaServed": { "@type": "Country", "name": "Kenya" }
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Nexa<span>Flow</span> Digital</a>
+            <ul class="nav-links">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#work">Work</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I%20need%20WhatsApp%20automation" class="nav-cta" target="_blank">💬 WhatsApp</a>
+            <button class="mobile-menu" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex';document.querySelector('.nav-links').style.position='absolute';document.querySelector('.nav-links').style.top='100%';document.querySelector('.nav-links').style.left='0';document.querySelector('.nav-links').style.right='0';document.querySelector('.nav-links').style.background='var(--primary)';document.querySelector('.nav-links').style.flexDirection='column';document.querySelector('.nav-links').style.padding='2rem';document.querySelector('.nav-links').style.borderBottom='1px solid var(--border)';"">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <span class="badge">📱 Over 90% of Kenyans Use WhatsApp</span>
+        <h1>WhatsApp Automation in Kenya — Transform Your Business Messaging</h1>
+        <p><strong>WhatsApp automation</strong> is the fastest way to scale your customer communication in Kenya. NexaFlow Digital builds automated WhatsApp systems that handle orders, send updates, recover abandoned carts, and provide 24/7 customer support. All while you focus on growing your business.</p>
+        <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I%20need%20WhatsApp%20automation" class="btn-primary" target="_blank">💬 Get WhatsApp Automation Quote</a>
+    </section>
+
+    <section class="section">
+        <h2>What Is WhatsApp Automation?</h2>
+        <p>WhatsApp automation uses the WhatsApp Business API to send automated, personalized messages to your customers. Unlike the free WhatsApp Business app (which is limited), the API allows you to:</p>
+        <ul>
+            <li><strong>Send bulk messages</strong> to thousands of customers at once</li>
+            <li><strong>Automate responses</strong> to common questions 24/7</li>
+            <li><strong>Integrate with Shopify, WooCommerce, and CRMs</strong></li>
+            <li><strong>Send order confirmations, shipping updates, and reminders</strong></li>
+            <li><strong>Recover abandoned carts</strong> with personalized follow-ups</li>
+            <li><strong>Handle multi-agent conversations</strong> with a shared team inbox</li>
+        </ul>
+        <p>At NexaFlow Digital, we build complete WhatsApp automation workflows tailored to your business. From simple welcome messages to complex e-commerce integrations.</p>
+    </section>
+
+    <section class="section">
+        <h2>5 Ways WhatsApp Automation Grows Your Business</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>1. Instant Customer Replies</h3>
+                <p>80% of customers expect a response within 1 hour. AI chatbots reply instantly, 24/7. Answer FAQs, provide pricing, and guide customers without human intervention.</p>
+            </div>
+            <div class="card">
+                <h3>2. Automated Order Processing</h3>
+                <p>Customers browse your catalog, select items, and pay via M-Pesa — all within WhatsApp. The bot confirms orders, sends receipts, and notifies your team.</p>
+            </div>
+            <div class="card">
+                <h3>3. Abandoned Cart Recovery</h3>
+                <p>70% of carts are abandoned. Automated WhatsApp reminders at 1 hour, 24 hours, and 3 days recover 25-35% of lost sales. Include M-Pesa payment links for instant checkout.</p>
+            </div>
+            <div class="card">
+                <h3>4. Delivery Updates</h3>
+                <p>Proactive shipping notifications reduce "where is my order" complaints by 60%. Customers receive: order confirmation → shipped → out for delivery → delivered.</p>
+            </div>
+            <div class="card">
+                <h3>5. Cost Savings</h3>
+                <p>One AI agent handles 1,000+ conversations simultaneously. Replace 2-3 human agents and save KSH 30,000–50,000/month while improving response times.</p>
+            </div>
+            <div class="card">
+                <h3>6. Rich Media Messages</h3>
+                <p>Send images, PDFs, videos, and product catalogs directly in WhatsApp. No need for customers to visit a website — everything happens in the app they already use.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>WhatsApp Automation for E-commerce</h2>
+        <p>For online stores, WhatsApp automation is a game-changer. Here's a typical customer journey:</p>
+        <ol style="color:var(--text-muted); margin-left:1.5rem; margin-bottom:1rem;">
+            <li>Customer clicks "WhatsApp Us" on your Shopify store</li>
+            <li>Bot sends welcome message + product catalog</li>
+            <li>Customer selects items and quantities</li>
+            <li>Bot calculates total (including delivery fee)</li>
+            <li>Customer receives M-Pesa payment prompt</li>
+            <li>Bot confirms order and sends receipt</li>
+            <li>Bot sends shipping updates at each stage</li>
+            <li>Bot follows up 3 days later for a review</li>
+        </ol>
+        <p>One Nairobi fashion brand we automated now processes <strong>60% of orders entirely through WhatsApp</strong> — from inquiry to payment to delivery tracking.</p>
+    </section>
+
+    <section class="section">
+        <h2>Our WhatsApp Automation Process</h2>
+        <h3>Step 1: Define Your Flows</h3>
+        <p>We map every customer interaction: welcome messages, FAQ responses, order flows, complaint handling, and human handoffs.</p>
+        <h3>Step 2: API Setup</h3>
+        <p>We set up your WhatsApp Business API account, verify your Facebook Business Manager, and get Meta approval.</p>
+        <h3>Step 3: Build & Train</h3>
+        <p>We build the automation flows, train the AI on your business data, and integrate with your Shopify, WooCommerce, or CRM.</p>
+        <h3>Step 4: Test & Launch</h3>
+        <p>We test with your team, refine responses, and go live. After launch, we monitor metrics and optimize weekly.</p>
+    </section>
+
+    <section class="section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>Is WhatsApp Business API free?</h3>
+            <p>No, it's a paid service. You pay per "conversation" (a 24-hour chat window) at approximately KSH 3–8 per conversation. However, the ROI is high — one recovered abandoned cart can cover your entire monthly cost.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Can I use my existing phone number?</h3>
+            <p>Yes, but it must not be registered with regular WhatsApp. You'll need a dedicated business number. We handle the entire setup.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How long does setup take?</h3>
+            <p>Meta approval takes 1–3 business days. Once approved, we can build basic flows in 3–5 days. Complex integrations take 1–2 weeks.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Can WhatsApp automation handle M-Pesa?</h3>
+            <p>Yes. We integrate M-Pesa seamlessly. The bot sends payment prompts and confirms completion automatically.</p>
+        </div>
+        <div class="faq-item">
+            <h3>What platforms can you integrate with?</h3>
+            <p>Shopify, WooCommerce, WordPress, custom websites, and most CRMs. We also integrate with Google Sheets, Zapier, and Make for custom workflows.</p>
+        </div>
+    </section>
+
+    <div class="section">
+        <div class="cta-box">
+            <h2>Ready to Automate Your WhatsApp?</h2>
+            <p>We've built WhatsApp automation for 50+ Kenyan businesses. From salons to retail chains. Let's talk about your specific needs.</p>
+            <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I%20want%20WhatsApp%20automation" class="btn-primary" target="_blank">💬 Get a Free WhatsApp Automation Quote</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Nexa<span>Flow</span> Digital</h3>
+                <p>Full-stack digital solutions for modern businesses. Based in Nairobi, serving Kenya and East Africa.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="website-development-kenya.html">Web Development</a></li>
+                    <li><a href="ai-calling-agents-kenya.html">AI Agents</a></li>
+                    <li><a href="whatsapp-automation-kenya.html">WhatsApp Automation</a></li>
+                    <li><a href="shopify-kenya.html">Shopify</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#work">Our Work</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://wa.me/254106216699" target="_blank">WhatsApp</a></li>
+                    <li><a href="tel:+254106216699">Call Us</a></li>
+                    <li><a href="mailto:support@wedialai.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 NexaFlow Digital. All rights reserved. | <a href="privacy.html" style="color:var(--text-dark)">Privacy</a> | <a href="terms.html" style="color:var(--text-dark)">Terms</a></p>
+        </div>
+    </footer>
+</body>
+</html>

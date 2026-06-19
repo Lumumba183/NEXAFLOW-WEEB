@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify Kenya — E-commerce Store Development with M-Pesa | NexaFlow Digital</title>
+    <meta name="description" content="Shopify store development in Kenya with M-Pesa integration. Professional e-commerce websites from KSH 25,000. Sell online with Kenya's favourite payment method.">
+    <link rel="canonical" href="https://nexaflow-digital.com/shopify-kenya.html">
+    <meta property="og:title" content="Shopify Kenya — E-commerce with M-Pesa Integration">
+    <meta property="og:description" content="Shopify store development in Kenya with M-Pesa. Sell online with Kenya's favourite payment method.">
+    <meta property="og:url" content="https://nexaflow-digital.com/shopify-kenya.html">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0a0f1a; --primary-light: #111827; --accent: #3b82f6; --accent-glow: #60a5fa; --gold: #c9a227; --gold-bright: #e8c547; --gold-pale: #f5e6a3; --text: #f8fafc; --text-muted: #94a3b8; --text-dark: #64748b; --border: #334155; --card: #1e293b; --success: #10b981; --font-display: 'Playfair Display', serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--primary); color: var(--text); line-height: 1.7; }
+        a { color: var(--gold-bright); transition: color 0.3s; text-decoration: none; }
+        a:hover { color: var(--gold-pale); }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(10,15,26,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); z-index: 1000; padding: 1rem 0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; font-family: var(--font-display); }
+        .logo span { color: var(--gold-bright); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text-muted); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta { background: linear-gradient(135deg, var(--gold), var(--gold-bright)); color: var(--primary); padding: 0.6rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; }
+        .nav-cta:hover { background: linear-gradient(135deg, var(--gold-bright), var(--gold-pale)); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(201,162,39,0.3); }
+        .mobile-menu { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+        .hero { padding: 8rem 2rem 4rem; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; font-family: var(--font-display); background: linear-gradient(135deg, var(--gold-bright) 0%, #ffffff 50%, var(--gold-pale) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem; }
+        .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-bright)); color: var(--primary); padding: 1rem 2rem; border-radius: 12px; font-weight: 700; font-size: 1rem; display: inline-block; transition: all 0.3s; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,162,39,0.3); }
+        .section { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+        .section h2 { font-size: 2rem; font-weight: 700; margin-bottom: 2rem; text-align: center; font-family: var(--font-display); color: var(--gold-bright); }
+        .section h3 { font-size: 1.3rem; font-weight: 600; margin: 2rem 0 1rem; color: var(--text); }
+        .section p { color: var(--text-muted); margin-bottom: 1rem; }
+        .section ul { color: var(--text-muted); margin-left: 1.5rem; margin-bottom: 1rem; }
+        .section li { margin-bottom: 0.6rem; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; }
+        .card h3 { color: var(--gold-bright); margin-top: 0; font-family: var(--font-display); }
+        .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
+        .faq-item h3 { color: var(--gold-bright); margin-top: 0; margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .faq-item p { margin-bottom: 0; }
+        .cta-box { background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(201,162,39,0.1)); border: 1px solid var(--border); border-radius: 16px; padding: 3rem; text-align: center; margin: 2rem 0; }
+        .cta-box h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .cta-box p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .badge { display: inline-block; background: rgba(16,185,129,0.1); color: var(--success); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; }
+        .pricing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        .pricing-table th, .pricing-table td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+        .pricing-table th { color: var(--gold-bright); font-weight: 600; background: rgba(201,162,39,0.05); }
+        .pricing-table td { color: var(--text-muted); }
+        footer { background: var(--primary-light); border-top: 1px solid var(--border); padding: 3rem 2rem 2rem; margin-top: 4rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; }
+        .footer-brand h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; font-family: var(--font-display); }
+        .footer-brand h3 span { color: var(--gold-bright); }
+        .footer-brand p { color: var(--text-muted); font-size: 0.9rem; }
+        .footer-links h4 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 0.5rem; }
+        .footer-links a { color: var(--text-muted); font-size: 0.9rem; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--gold-bright); }
+        .footer-bottom { max-width: 1200px; margin: 3rem auto 0; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text-dark); font-size: 0.85rem; }
+        @media (max-width: 768px) { .nav-links { display: none; } .mobile-menu { display: block; } .footer-content { grid-template-columns: 1fr 1fr; } .hero { padding: 7rem 1.5rem 3rem; } }
+        @media (max-width: 480px) { .footer-content { grid-template-columns: 1fr; } }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Shopify E-commerce Development",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "NexaFlow Digital",
+        "address": { "@type": "PostalAddress", "addressCountry": "KE", "addressLocality": "Nairobi" },
+        "telephone": "+254106216699",
+        "url": "https://nexaflow-digital.com"
+      },
+      "areaServed": { "@type": "Country", "name": "Kenya" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "25000",
+        "highPrice": "80000",
+        "priceCurrency": "KES"
+      }
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Nexa<span>Flow</span> Digital</a>
+            <ul class="nav-links">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#work">Work</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I%20want%20a%20Shopify%20store" class="nav-cta" target="_blank">💬 WhatsApp</a>
+            <button class="mobile-menu" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex';document.querySelector('.nav-links').style.position='absolute';document.querySelector('.nav-links').style.top='100%';document.querySelector('.nav-links').style.left='0';document.querySelector('.nav-links').style.right='0';document.querySelector('.nav-links').style.background='var(--primary)';document.querySelector('.nav-links').style.flexDirection='column';document.querySelector('.nav-links').style.padding='2rem';document.querySelector('.nav-links').style.borderBottom='1px solid var(--border)';"">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <span class="badge">🛒 Shopify + M-Pesa for Kenyan Businesses</span>
+        <h1>Shopify Kenya — E-commerce Stores with M-Pesa Integration</h1>
+        <p><strong>Shopify</strong> is the world's most popular e-commerce platform — and we make it work for Kenya. NexaFlow Digital builds professional Shopify stores with <strong>M-Pesa integration</strong>, so your customers can pay using Kenya's favourite payment method. Sell online starting from KSH 25,000.</p>
+        <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I%20want%20a%20Shopify%20store%20with%20M-Pesa" class="btn-primary" target="_blank">💬 Get a Shopify Store Quote</a>
+    </section>
+
+    <section class="section">
+        <h2>Why Shopify for Kenyan E-commerce?</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>🚀 Easy to Use</h3>
+                <p>Shopify's dashboard is intuitive. Add products, manage orders, and track sales without technical knowledge. Your team can be trained in under an hour.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Lightning Fast</h3>
+                <p>Shopify hosts your store on global servers with a CDN. Your site loads fast everywhere — even on Kenyan mobile networks. No hosting headaches.</p>
+            </div>
+            <div class="card">
+                <h3>🔒 Secure & Reliable</h3>
+                <p>SSL certificate, PCI compliance, fraud detection, and 99.9% uptime — all included. Your customers' payment data is safe. Shopify handles security so you don't have to.</p>
+            </div>
+            <div class="card">
+                <h3>📱 Mobile-Optimized</h3>
+                <p>Every Shopify theme is responsive. Your store looks great on Infinix, Tecno, Samsung, and iPhone — the devices most Kenyans use.</p>
+            </div>
+            <div class="card">
+                <h3>📈 Scales with You</h3>
+                <p>From 10 products to 10,000. From 10 orders/day to 1,000. Shopify handles it without breaking. Perfect for businesses that plan to grow.</p>
+            </div>
+            <div class="card">
+                <h3>💬 24/7 Support</h3>
+                <p>Shopify's support team is available round the clock. When something breaks at midnight during a sale, help is just a chat away.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>M-Pesa Integration — The Critical Factor for Kenya</h2>
+        <p>Without M-Pesa, you're losing 70% of potential customers. We build custom M-Pesa integrations for Shopify that work seamlessly:</p>
+        <ul>
+            <li><strong>Customer adds products</strong> to cart and proceeds to checkout</li>
+            <li><strong>"Pay with M-Pesa"</strong> appears as a payment option</li>
+            <li><strong>Customer enters their M-Pesa number</strong></li>
+            <li><strong>STK push sent</strong> to their phone (they just enter PIN)</li>
+            <li><strong>Payment confirmed instantly</strong> — order marked as paid</li>
+            <li><strong>Both customer and merchant</strong> receive confirmation</li>
+        </ul>
+        <p>Our Shopify M-Pesa integration includes: STK push, manual entry fallback, automatic order status updates, refund capability, and transaction reporting. One-time setup cost: KSH 15,000–25,000.</p>
+    </section>
+
+    <section class="section">
+        <h2>Our Shopify Packages</h2>
+        <table class="pricing-table">
+            <thead>
+                <tr><th>Feature</th><th>Starter — KSH 25,000</th><th>Standard — KSH 45,000</th><th>Premium — KSH 75,000</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Store Setup</strong></td><td>Basic Shopify setup</td><td>Custom theme + setup</td><td>Full custom design</td></tr>
+                <tr><td><strong>M-Pesa Integration</strong></td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td><strong>Products</strong></td><td>Up to 50 products</td><td>Up to 200 products</td><td>Unlimited products</td></tr>
+                <tr><td><strong>Theme</strong></td><td>Free Shopify theme</td><td>Premium theme</td><td>Custom theme design</td></tr>
+                <tr><td><strong>WhatsApp Automation</strong></td><td>❌</td><td>✅</td><td>✅</td></tr>
+                <tr><td><strong>SEO Setup</strong></td><td>Basic</td><td>Enhanced</td><td>Advanced</td></tr>
+                <tr><td><strong>Analytics</strong></td><td>Basic</td><td>Google Analytics</td><td>Advanced tracking</td></tr>
+                <tr><td><strong>Support</strong></td><td>1 month</td><td>3 months</td><td>6 months</td></tr>
+            </tbody>
+        </table>
+        <p style="text-align:center; margin-top:2rem;"><a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I%20want%20Shopify%20store%20pricing" class="btn-primary" target="_blank">💬 Discuss Shopify Packages</a></p>
+    </section>
+
+    <section class="section">
+        <h2>Our Shopify + M-Pesa Process</h2>
+        <h3>Step 1: Strategy (Day 1)</h3>
+        <p>We understand your products, target audience, and competitors. We plan the store structure, navigation, and user flow.</p>
+        <h3>Step 2: Design (Days 2–5)</h3>
+        <p>We customize your Shopify theme to match your brand. Colors, fonts, layout, and imagery — all aligned with your brand identity.</p>
+        <h3>Step 3: Development (Days 6–10)</h3>
+        <p>We build the store, add products, configure shipping, set up taxes, and integrate M-Pesa. Every page is tested for mobile and speed.</p>
+        <h3>Step 4: M-Pesa Integration (Days 11–12)</h3>
+        <p>We build and test the custom M-Pesa integration. We test with real transactions (small amounts) to ensure everything works.</p>
+        <h3>Step 5: Launch (Days 13–14)</h3>
+        <p>We remove password protection, connect your domain, and launch. We also submit your sitemap to Google and set up analytics.</p>
+        <h3>Step 6: Handover & Training</h3>
+        <p>We show you how to manage orders, add products, and track sales. You get full documentation and 30 days of free support.</p>
+    </section>
+
+    <section class="section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>Can I accept M-Pesa on Shopify?</h3>
+            <p>Yes! Shopify doesn't have native M-Pesa, but we build custom integrations. Your customers see "Pay with M-Pesa" at checkout and receive an STK push on their phone.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How much does a Shopify store cost in Kenya?</h3>
+            <p>Our Shopify development starts at KSH 25,000 (one-time setup). You'll also pay Shopify's monthly fee ($29/month for Basic). M-Pesa integration is a one-time KSH 15,000–25,000.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How long does it take to build a Shopify store?</h3>
+            <p>A basic store takes 1–2 weeks. A custom store with M-Pesa takes 2–4 weeks. The timeline depends on product count and customization level.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Can I manage the store myself?</h3>
+            <p>Yes. Shopify is designed for non-technical users. We provide training on adding products, managing orders, and updating content. Most clients are comfortable within a week.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Do I need a business registration to sell online?</h3>
+            <p>Technically yes for tax compliance, but many small businesses start informally. We recommend getting registered as you grow. We can guide you through the process.</p>
+        </div>
+    </section>
+
+    <div class="section">
+        <div class="cta-box">
+            <h2>Ready to Sell Online?</h2>
+            <p>We've built 30+ Shopify stores for Kenyan businesses. From fashion brands to electronics dealers. Let's build yours.</p>
+            <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I%20want%20to%20start%20selling%20online" class="btn-primary" target="_blank">💬 Get Your Free Shopify Consultation</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Nexa<span>Flow</span> Digital</h3>
+                <p>Full-stack digital solutions for modern businesses. Based in Nairobi, serving Kenya and East Africa.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="website-development-kenya.html">Web Development</a></li>
+                    <li><a href="ai-calling-agents-kenya.html">AI Agents</a></li>
+                    <li><a href="whatsapp-automation-kenya.html">WhatsApp Automation</a></li>
+                    <li><a href="shopify-kenya.html">Shopify</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#work">Our Work</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://wa.me/254106216699" target="_blank">WhatsApp</a></li>
+                    <li><a href="tel:+254106216699">Call Us</a></li>
+                    <li><a href="mailto:support@wedialai.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 NexaFlow Digital. All rights reserved. | <a href="privacy.html" style="color:var(--text-dark)">Privacy</a> | <a href="terms.html" style="color:var(--text-dark)">Terms</a></p>
+        </div>
+    </footer>
+</body>
+</html>

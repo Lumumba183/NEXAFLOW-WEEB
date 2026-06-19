@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Development Kenya — Professional Web Design in Nairobi | NexaFlow Digital</title>
+    <meta name="description" content="Professional website development in Kenya. Custom websites from KSH 6,500. Mobile-first, SEO-ready, fast loading. Serving Nairobi, Mombasa, Kisumu & all of Kenya.">
+    <link rel="canonical" href="https://nexaflow-digital.com/website-development-kenya.html">
+    <meta property="og:title" content="Website Development Kenya — Professional Web Design in Nairobi">
+    <meta property="og:description" content="Custom websites from KSH 6,500. Mobile-first, SEO-ready, fast loading. Serving all of Kenya.">
+    <meta property="og:url" content="https://nexaflow-digital.com/website-development-kenya.html">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0a0f1a; --primary-light: #111827; --accent: #3b82f6; --accent-glow: #60a5fa; --gold: #c9a227; --gold-bright: #e8c547; --gold-pale: #f5e6a3; --text: #f8fafc; --text-muted: #94a3b8; --text-dark: #64748b; --border: #334155; --card: #1e293b; --success: #10b981; --font-display: 'Playfair Display', serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: var(--primary); color: var(--text); line-height: 1.7; }
+        a { color: var(--gold-bright); transition: color 0.3s; text-decoration: none; }
+        a:hover { color: var(--gold-pale); }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(10,15,26,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); z-index: 1000; padding: 1rem 0; }
+        .nav-container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 1.5rem; font-weight: 800; font-family: var(--font-display); }
+        .logo span { color: var(--gold-bright); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { color: var(--text-muted); font-weight: 500; font-size: 0.9rem; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--text); }
+        .nav-cta { background: linear-gradient(135deg, var(--gold), var(--gold-bright)); color: var(--primary); padding: 0.6rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; transition: all 0.3s; }
+        .nav-cta:hover { background: linear-gradient(135deg, var(--gold-bright), var(--gold-pale)); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(201,162,39,0.3); }
+        .mobile-menu { display: none; background: none; border: none; color: var(--text); font-size: 1.5rem; cursor: pointer; }
+        .hero { padding: 8rem 2rem 4rem; text-align: center; max-width: 900px; margin: 0 auto; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; line-height: 1.2; margin-bottom: 1.5rem; font-family: var(--font-display); background: linear-gradient(135deg, var(--gold-bright) 0%, #ffffff 50%, var(--gold-pale) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .hero p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem; }
+        .btn-primary { background: linear-gradient(135deg, var(--gold), var(--gold-bright)); color: var(--primary); padding: 1rem 2rem; border-radius: 12px; font-weight: 700; font-size: 1rem; display: inline-block; transition: all 0.3s; }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(201,162,39,0.3); }
+        .section { max-width: 1100px; margin: 0 auto; padding: 4rem 2rem; }
+        .section h2 { font-size: 2rem; font-weight: 700; margin-bottom: 2rem; text-align: center; font-family: var(--font-display); color: var(--gold-bright); }
+        .section h3 { font-size: 1.3rem; font-weight: 600; margin: 2rem 0 1rem; color: var(--text); }
+        .section p { color: var(--text-muted); margin-bottom: 1rem; }
+        .section ul { color: var(--text-muted); margin-left: 1.5rem; margin-bottom: 1rem; }
+        .section li { margin-bottom: 0.6rem; }
+        .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .card { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 2rem; }
+        .card h3 { color: var(--gold-bright); margin-top: 0; font-family: var(--font-display); }
+        .pricing-table { width: 100%; border-collapse: collapse; margin: 1.5rem 0; }
+        .pricing-table th, .pricing-table td { padding: 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+        .pricing-table th { color: var(--gold-bright); font-weight: 600; background: rgba(201,162,39,0.05); }
+        .pricing-table td { color: var(--text-muted); }
+        .pricing-table tr:hover { background: rgba(201,162,39,0.03); }
+        .faq-item { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.5rem; margin-bottom: 1rem; }
+        .faq-item h3 { color: var(--gold-bright); margin-top: 0; margin-bottom: 0.75rem; font-size: 1.1rem; }
+        .faq-item p { margin-bottom: 0; }
+        .cta-box { background: linear-gradient(135deg, rgba(59,130,246,0.1), rgba(201,162,39,0.1)); border: 1px solid var(--border); border-radius: 16px; padding: 3rem; text-align: center; margin: 2rem 0; }
+        .cta-box h2 { font-size: 2rem; margin-bottom: 1rem; }
+        .cta-box p { color: var(--text-muted); margin-bottom: 1.5rem; font-size: 1.1rem; }
+        .badge { display: inline-block; background: rgba(16,185,129,0.1); color: var(--success); padding: 0.3rem 0.8rem; border-radius: 20px; font-size: 0.85rem; font-weight: 600; margin-bottom: 1rem; }
+        footer { background: var(--primary-light); border-top: 1px solid var(--border); padding: 3rem 2rem 2rem; margin-top: 4rem; }
+        .footer-content { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 3rem; }
+        .footer-brand h3 { font-size: 1.5rem; font-weight: 800; margin-bottom: 1rem; font-family: var(--font-display); }
+        .footer-brand h3 span { color: var(--gold-bright); }
+        .footer-brand p { color: var(--text-muted); font-size: 0.9rem; }
+        .footer-links h4 { font-size: 1rem; font-weight: 700; margin-bottom: 1rem; }
+        .footer-links ul { list-style: none; }
+        .footer-links li { margin-bottom: 0.5rem; }
+        .footer-links a { color: var(--text-muted); font-size: 0.9rem; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--gold-bright); }
+        .footer-bottom { max-width: 1200px; margin: 3rem auto 0; padding-top: 2rem; border-top: 1px solid var(--border); text-align: center; color: var(--text-dark); font-size: 0.85rem; }
+        @media (max-width: 768px) { .nav-links { display: none; } .mobile-menu { display: block; } .footer-content { grid-template-columns: 1fr 1fr; } .hero { padding: 7rem 1.5rem 3rem; } }
+        @media (max-width: 480px) { .footer-content { grid-template-columns: 1fr; } }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Website Development",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "NexaFlow Digital",
+        "address": { "@type": "PostalAddress", "addressCountry": "KE", "addressLocality": "Nairobi" },
+        "telephone": "+254106216699",
+        "url": "https://nexaflow-digital.com"
+      },
+      "areaServed": { "@type": "Country", "name": "Kenya" },
+      "offers": {
+        "@type": "AggregateOffer",
+        "lowPrice": "6500",
+        "highPrice": "18000",
+        "priceCurrency": "KES"
+      }
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Nexa<span>Flow</span> Digital</a>
+            <ul class="nav-links">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#pricing">Pricing</a></li>
+                <li><a href="index.html#work">Work</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+            <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I%20need%20a%20website" class="nav-cta" target="_blank">💬 WhatsApp</a>
+            <button class="mobile-menu" onclick="document.querySelector('.nav-links').style.display=document.querySelector('.nav-links').style.display==='flex'?'none':'flex';document.querySelector('.nav-links').style.position='absolute';document.querySelector('.nav-links').style.top='100%';document.querySelector('.nav-links').style.left='0';document.querySelector('.nav-links').style.right='0';document.querySelector('.nav-links').style.background='var(--primary)';document.querySelector('.nav-links').style.flexDirection='column';document.querySelector('.nav-links').style.padding='2rem';document.querySelector('.nav-links').style.borderBottom='1px solid var(--border)';"">☰</button>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <span class="badge">✅ Serving Nairobi, Mombasa, Kisumu & all of Kenya</span>
+        <h1>Website Development in Kenya — Professional Web Design That Converts</h1>
+        <p><strong>Website development in Kenya</strong> should be affordable, fast, and effective. At NexaFlow Digital, we build custom websites starting from KSH 6,500 — mobile-first, SEO-ready, and designed to turn visitors into customers. Whether you're a startup in Nairobi or an established business in Mombasa, we create websites that work.</p>
+        <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I%20need%20a%20website%20in%20Kenya" class="btn-primary" target="_blank">💬 Get a Free Website Quote</a>
+    </section>
+
+    <section class="section">
+        <h2>Why Kenyan Businesses Choose NexaFlow</h2>
+        <div class="grid-2">
+            <div class="card">
+                <h3>🚀 Mobile-First Design</h3>
+                <p>80% of Kenyans browse on mobile. Every website we build is designed for smartphones first, then tablets and desktops. Your site looks perfect on Infinix, Tecno, Samsung, and iPhone.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Lightning Fast</h3>
+                <p>We optimize for speed — under 3 seconds load time even on 3G networks. Fast sites rank higher on Google and keep visitors from bouncing.</p>
+            </div>
+            <div class="card">
+                <h3>🔍 SEO-Ready Out of the Box</h3>
+                <p>Every site includes proper title tags, meta descriptions, schema markup, and clean URL structure. Google will understand your site from day one.</p>
+            </div>
+            <div class="card">
+                <h3>💰 Transparent Pricing</h3>
+                <p>No hidden fees. No surprises. Our packages are clear: KSH 6,500 (Basic), KSH 12,000 (Standard), KSH 18,000 (Premium). All include a free domain and professional email.</p>
+            </div>
+            <div class="card">
+                <h3>🎨 Custom Design</h3>
+                <p>We don't use generic templates. Every site is designed to match your brand — colors, fonts, imagery, and tone. Your website will be unique.</p>
+            </div>
+            <div class="card">
+                <h3>🤝 Local Support</h3>
+                <p>Based in Nairobi, serving all of Kenya. We're on WhatsApp, phone, and email. No overseas call centers. Real people who understand the Kenyan market.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Our Website Packages</h2>
+        <p>Three clear packages designed for different business stages. Every package includes a <strong>free domain</strong> and <strong>professional email address</strong>.</p>
+        <table class="pricing-table">
+            <thead>
+                <tr><th>Feature</th><th>Basic — KSH 6,500</th><th>Standard — KSH 12,000</th><th>Premium — KSH 18,000</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Pages</strong></td><td>5 pages</td><td>10 pages</td><td>10+ pages</td></tr>
+                <tr><td><strong>Contact Form</strong></td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td><strong>Image Gallery</strong></td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td><strong>Social Media</strong></td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td><strong>Responsive</strong></td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td><strong>Free Domain</strong></td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td><strong>Professional Email</strong></td><td>✅</td><td>✅</td><td>✅</td></tr>
+                <tr><td><strong>Blog</strong></td><td>❌</td><td>✅</td><td>✅</td></tr>
+                <tr><td><strong>SEO Optimization</strong></td><td>Basic</td><td>Enhanced</td><td>Advanced</td></tr>
+                <tr><td><strong>Google Business</strong></td><td>❌</td><td>✅</td><td>✅</td></tr>
+                <tr><td><strong>CMS</strong></td><td>❌</td><td>❌</td><td>✅</td></tr>
+                <tr><td><strong>Analytics</strong></td><td>❌</td><td>❌</td><td>✅</td></tr>
+                <tr><td><strong>Support</strong></td><td>Standard</td><td>3 months priority</td><td>6 months priority</td></tr>
+            </tbody>
+        </table>
+        <p style="text-align:center; margin-top:2rem;"><a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I%20want%20to%20discuss%20website%20packages" class="btn-primary" target="_blank">💬 Discuss Your Website Needs</a></p>
+    </section>
+
+    <section class="section">
+        <h2>Our Website Development Process</h2>
+        <h3>Step 1: Discovery (Day 1)</h3>
+        <p>We discuss your business, goals, target audience, and competitors. We identify the keywords your customers are searching for and plan the site structure.</p>
+        <h3>Step 2: Design (Days 2–5)</h3>
+        <p>We create a custom design mockup based on your brand. You review and approve before we build anything.</p>
+        <h3>Step 3: Development (Days 6–10)</h3>
+        <p>We build the site with clean, SEO-friendly code. Every page is optimized for mobile, speed, and search engines.</p>
+        <h3>Step 4: Content (Days 11–12)</h3>
+        <p>We add your text, images, and branding. We optimize all images and write SEO-friendly copy if needed.</p>
+        <h3>Step 5: Testing & Launch (Day 13–14)</h3>
+        <p>We test on multiple devices, check all links, verify speed, and launch. We also submit your sitemap to Google.</p>
+        <h3>Step 6: Handover & Training</h3>
+        <p>We show you how to manage your site. You get full documentation and 30 days of free support.</p>
+    </section>
+
+    <section class="section">
+        <h2>Industries We Serve</h2>
+        <div class="grid-2">
+            <div class="card"><h3>🏪 E-commerce</h3><p>Online stores with M-Pesa integration, product catalogs, and cart systems.</p></div>
+            <div class="card"><h3>🏠 Real Estate</h3><p>Property listings, agent profiles, and lead capture forms.</p></div>
+            <div class="card"><h3>🏥 Healthcare</h3><p>Clinic websites, appointment booking, and patient information.</p></div>
+            <div class="card"><h3>🎓 Education</h3><p>School websites, course pages, and enrollment systems.</p></div>
+            <div class="card"><h3>🍽️ Restaurants</h3><p>Menu pages, online ordering, and reservation systems.</p></div>
+            <div class="card"><h3>⚖️ Professional Services</h3><p>Lawyers, accountants, consultants — authority-building websites.</p></div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3>How much does a website cost in Kenya?</h3>
+            <p>Our website packages start at <strong>KSH 6,500</strong> for a 5-page basic site. Standard packages are KSH 12,000 and Premium packages are KSH 18,000. All include a free domain and professional email. <a href="blog/website-cost-kenya-2026.html">Read our full pricing guide</a>.</p>
+        </div>
+        <div class="faq-item">
+            <h3>How long does it take to build a website?</h3>
+            <p>A basic 5-page website takes <strong>1–2 weeks</strong>. Standard websites take 2–3 weeks. Premium websites with CMS take 3–4 weeks. The timeline depends on how quickly you provide content and feedback.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Do you offer website maintenance?</h3>
+            <p>Yes. Our basic maintenance is <strong>KSH 2,000/year</strong> and includes updates, security patches, and backups. Enhanced maintenance with priority support is KSH 2,500–5,000/month.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Can I update my website myself?</h3>
+            <p>Our Standard and Premium packages include a CMS (Content Management System) that lets you update text, images, and blog posts without coding knowledge. Basic packages require us to make updates.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Do you build e-commerce websites with M-Pesa?</h3>
+            <p>Yes, we specialize in <a href="shopify-kenya.html">Shopify stores with M-Pesa integration</a>. We can also add M-Pesa to custom websites. <a href="blog/shopify-vs-woocommerce-kenya.html">Read our e-commerce platform comparison</a>.</p>
+        </div>
+    </section>
+
+    <div class="section">
+        <div class="cta-box">
+            <h2>Ready for Your New Website?</h2>
+            <p>We've built 50+ websites for Kenyan businesses. From startups to established brands. Let's discuss your project — no obligation, no pressure.</p>
+            <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I%20need%20a%20website%20in%20Kenya" class="btn-primary" target="_blank">💬 Get Your Free Website Quote</a>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>Nexa<span>Flow</span> Digital</h3>
+                <p>Full-stack digital solutions for modern businesses. Based in Nairobi, serving Kenya and East Africa.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="website-development-kenya.html">Web Development</a></li>
+                    <li><a href="ai-calling-agents-kenya.html">AI Agents</a></li>
+                    <li><a href="whatsapp-automation-kenya.html">WhatsApp Automation</a></li>
+                    <li><a href="shopify-kenya.html">Shopify</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="index.html#pricing">Pricing</a></li>
+                    <li><a href="index.html#work">Our Work</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://wa.me/254106216699" target="_blank">WhatsApp</a></li>
+                    <li><a href="tel:+254106216699">Call Us</a></li>
+                    <li><a href="mailto:support@wedialai.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 NexaFlow Digital. All rights reserved. | <a href="privacy.html" style="color:var(--text-dark)">Privacy</a> | <a href="terms.html" style="color:var(--text-dark)">Terms</a></p>
+        </div>
+    </footer>
+</body>
+</html>
