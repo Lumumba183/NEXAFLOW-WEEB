@@ -83,12 +83,12 @@ const projects = [
     link: 'https://wedialai.com',
   },
   {
-    badge: 'Branding Website',
+    badge: 'Live Website',
     num: 'No. 02',
-    title: 'Mwanda Brands',
-    desc: 'Complete brand identity and website for Mwanda Brands East Africa — a leading branding and marketing company in Kenya. Live at www.mbrands.co.ke.',
-    img: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=220&fit=crop&auto=format&q=80',
-    link: 'https://www.mbrands.co.ke',
+    title: 'Labuima Masai Mara Safaris',
+    desc: 'Wildlife safari booking platform with immersive photo galleries, itinerary builder, and direct booking integration. Built for a premier Masai Mara tour operator.',
+    img: 'https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=400&h=220&fit=crop&auto=format&q=80',
+    link: 'https://labuimaasaimarasafaris.com/',
   },
   {
     badge: '+142% conversion',
