@@ -2,4 +2,14 @@
   command = "mkdir -p dist && cp *.html dist/ && cp robots.txt dist/ && cp sitemap.xml dist/ && cp -r blog dist/"
   publish = "dist"
 
+[[redirects]]
+  from = "/blog"
+  to = "/blog.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog/*"
+  to = "/blog/:splat"
+  status = 200
+
 # Deployed via Git push — auto-build enabled
