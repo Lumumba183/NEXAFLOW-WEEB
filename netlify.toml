@@ -1,5 +1,5 @@
 [build]
-  command = "mkdir -p dist && cp *.html dist/ && cp robots.txt dist/ && cp sitemap.xml dist/ && cp -r blog dist/"
+  command = "npm run build"
   publish = "dist"
 
 [[redirects]]

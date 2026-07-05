@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useLocation, Link } from 'react-router'
 
-const ACCENT = '#3b82f6'
 const GOLD = '#c9a227'
 const GOLD_BRIGHT = '#e8c547'
 
@@ -26,6 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     { label: 'Services', href: isHome ? '#services' : '/#services' },
     { label: 'Pricing', href: isHome ? '#pricing' : '/#pricing' },
     { label: 'Work', href: isHome ? '#work' : '/#work' },
+    { label: 'WeDial AI', href: isHome ? '#wedialai' : '/#wedialai' },
     { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: isHome ? '#contact' : '/#contact' },
   ]
@@ -51,10 +51,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Link to="/" style={{ fontSize: '1.5rem', fontWeight: 800, textDecoration: 'none', color: '#f8fafc' }}>
             Nexa<span style={{ color: GOLD_BRIGHT }}>Flow</span> Digital
           </Link>
+
+          {/* Desktop Nav */}
           <ul style={{
-            display: menuOpen ? 'flex' : 'flex', gap: '2rem', listStyle: 'none', margin: 0, padding: 0,
-            ...(window.innerWidth < 768 ? { display: menuOpen ? 'flex' : 'none', position: 'absolute', top: '100%', left: 0, right: 0, background: '#0a0f1a', flexDirection: 'column', padding: '2rem', borderBottom: '1px solid #334155' } : {})
-          } as React.CSSProperties}>
+            display: 'flex', gap: '2rem', listStyle: 'none', margin: 0, padding: 0,
+          }} className="desktop-nav">
             {navLinks.map(link => (
               <li key={link.label}>
                 <a href={link.href} onClick={(e) => handleNavClick(e, link.href)}
@@ -66,13 +67,45 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               </li>
             ))}
           </ul>
+
           <a href="https://wa.me/254106216699?text=Hi%20NexaFlow%2C%20I'm%20interested%20in%20your%20services" target="_blank" rel="noopener noreferrer"
             style={{ background: `linear-gradient(135deg, ${GOLD}, ${GOLD_BRIGHT})`, color: '#0a0f1a', padding: '0.6rem 1.5rem', borderRadius: 8, fontWeight: 600, fontSize: '0.9rem', textDecoration: 'none' }}>
             💬 WhatsApp
           </a>
-          <button onClick={() => setMenuOpen(!menuOpen)} style={{ display: 'none', background: 'none', border: 'none', color: '#f8fafc', fontSize: '1.5rem', cursor: 'pointer' }}>☰</button>
+
+          {/* Mobile hamburger */}
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            style={{ display: 'none', background: 'none', border: 'none', color: '#f8fafc', fontSize: '1.5rem', cursor: 'pointer' }}
+            className="mobile-menu-btn"
+          >
+            ☰
+          </button>
         </div>
+
+        {/* Mobile Nav Dropdown */}
+        {menuOpen && (
+          <div style={{
+            position: 'absolute', top: '100%', left: 0, right: 0,
+            background: '#0a0f1a', borderBottom: '1px solid #334155',
+            padding: '2rem', display: 'flex', flexDirection: 'column', gap: '1.5rem',
+          }} className="mobile-nav-dropdown">
+            {navLinks.map(link => (
+              <a key={link.label} href={link.href} onClick={(e) => handleNavClick(e, link.href)}
+                style={{ color: '#94a3b8', fontWeight: 500, fontSize: '1rem', textDecoration: 'none' }}>
+                {link.label}
+              </a>
+            ))}
+          </div>
+        )}
       </nav>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .desktop-nav { display: none !important; }
+          .mobile-menu-btn { display: block !important; }
+        }
+      `}</style>
 
       {/* Main Content */}
       <main style={{ paddingTop: 80 }}>{children}</main>
@@ -84,12 +117,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <h3 style={{ fontSize: '1.5rem', fontWeight: 800, marginBottom: '1rem', fontFamily: "'Playfair Display', serif" }}>
               Nexa<span style={{ color: GOLD_BRIGHT }}>Flow</span> Digital
             </h3>
-            <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}>Full-stack digital solutions for modern businesses. Based in Nairobi, serving the world.</p>
+            <p style={{ color: '#94a3b8', fontSize: '0.9rem' }}>Professional website development and AI automation. Based in Nairobi, Kenya — serving businesses worldwide.</p>
           </div>
           <div>
             <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1rem' }}>Services</h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
-              {['Web Development', 'AI Agents', 'WhatsApp Automation', 'Shopify Solutions'].map(s => (
+              {['Website Development', 'AI Calling Agents', 'WhatsApp Automation', 'E-Shop Design', 'Web + Android Apps'].map(s => (
                 <li key={s} style={{ marginBottom: '0.5rem' }}>
                   <a href="/" style={{ color: '#94a3b8', fontSize: '0.9rem', textDecoration: 'none' }}>{s}</a>
                 </li>
@@ -99,20 +132,33 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div>
             <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1rem' }}>Company</h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
-              {['Pricing', 'Our Work', 'Contact'].map(s => (
-                <li key={s} style={{ marginBottom: '0.5rem' }}>
-                  <a href="/" style={{ color: '#94a3b8', fontSize: '0.9rem', textDecoration: 'none' }}>{s}</a>
+              {[
+                { label: 'About Us', href: '/#about' },
+                { label: 'Blog', href: '/blog' },
+                { label: 'Careers', href: '/#careers' },
+                { label: 'Partners', href: '/#partners' },
+              ].map(s => (
+                <li key={s.label} style={{ marginBottom: '0.5rem' }}>
+                  <a href={s.href} style={{ color: '#94a3b8', fontSize: '0.9rem', textDecoration: 'none' }}>{s.label}</a>
                 </li>
               ))}
             </ul>
           </div>
           <div>
-            <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1rem' }}>Connect</h4>
+            <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1rem' }}>Contact</h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://wa.me/254106216699" target="_blank" rel="noopener noreferrer" style={{ color: '#94a3b8', fontSize: '0.9rem', textDecoration: 'none' }}>WhatsApp</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="tel:+254106216699" style={{ color: '#94a3b8', fontSize: '0.9rem', textDecoration: 'none' }}>Call Us</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="mailto:smartsolutions870@gmail.com" style={{ color: '#94a3b8', fontSize: '0.9rem', textDecoration: 'none' }}>Email</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://wedialai.com" target="_blank" rel="noopener noreferrer" style={{ color: '#94a3b8', fontSize: '0.9rem', textDecoration: 'none' }}>Wedial AI</a></li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a href="https://wa.me/254106216699" target="_blank" rel="noopener noreferrer" style={{ color: '#94a3b8', fontSize: '0.9rem', textDecoration: 'none' }}>WhatsApp: +254 106 216 699</a>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a href="tel:+254106216699" style={{ color: '#94a3b8', fontSize: '0.9rem', textDecoration: 'none' }}>Phone: +254 106 216 699</a>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a href="mailto:smartsolutions870@gmail.com" style={{ color: '#94a3b8', fontSize: '0.9rem', textDecoration: 'none' }}>smartsolutions870@gmail.com</a>
+              </li>
+              <li style={{ marginBottom: '0.5rem' }}>
+                <a href="https://wedialai.com" target="_blank" rel="noopener noreferrer" style={{ color: '#94a3b8', fontSize: '0.9rem', textDecoration: 'none' }}>WeDial AI Platform</a>
+              </li>
             </ul>
           </div>
         </div>

@@ -6,6 +6,27 @@ const TEXT_MUTED = '#94a3b8'
 
 const blogPosts = [
   {
+    slug: '10-ways-ai-automation-10x-kenyan-business-2026',
+    title: '10 Ways AI Automation Can 10x Your Kenyan Business in 2026',
+    date: 'July 5, 2026',
+    excerpt: 'Discover how AI automation is transforming Kenyan businesses — from AI voice agents to WhatsApp automation, learn the 10 strategies that will multiply your revenue and cut operational costs in half.',
+    img: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=340&fit=crop&auto=format&q=80',
+  },
+  {
+    slug: 'nairobi-business-needs-professional-website',
+    title: 'Why Your Nairobi Business Needs a Professional Website (Not Just a Facebook Page)',
+    date: 'June 28, 2026',
+    excerpt: 'Stop relying on social media alone. Learn why a professional website is the #1 trust signal for Kenyan customers and how it directly impacts your sales, credibility, and long-term growth.',
+    img: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=340&fit=crop&auto=format&q=80',
+  },
+  {
+    slug: 'whatsapp-business-api-kenya-ecommerce-guide',
+    title: 'The Complete Guide to WhatsApp Business API for Kenyan E-commerce',
+    date: 'June 20, 2026',
+    excerpt: 'The definitive guide to using WhatsApp Business API for your Kenyan online store. From setup to automated order confirmations, abandoned cart recovery, and customer support at scale.',
+    img: 'https://images.unsplash.com/photo-1611746869696-d09bce200020?w=600&h=340&fit=crop&auto=format&q=80',
+  },
+  {
     slug: 'ai-chatbots-kenya',
     title: 'Why AI Chatbots Are Essential for Kenyan Businesses in 2025',
     date: 'March 15, 2025',
