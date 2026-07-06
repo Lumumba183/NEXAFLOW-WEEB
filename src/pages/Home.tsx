@@ -140,20 +140,20 @@ const projects = [
     link: 'https://labuimaasaimarasafaris.com/',
   },
   {
-    badge: '+142% conversion',
+    badge: 'Live Website',
     num: 'No. 03',
-    title: 'Nairobi Fashion Brand',
-    desc: 'Full-featured e-commerce with custom catalog, M-Pesa integration, and mobile-first design. Conversion rate doubled in 30 days.',
-    img: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=500&h=280&fit=crop&auto=format&q=80',
-    link: null,
+    title: 'House of Finance Kenya',
+    desc: 'Premium financial advisory boutique website with elegant dark-themed design, immersive scroll animations, and automated contact forms. Built for a Nairobi-based investment firm serving corporate clients across East Africa.',
+    img: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=280&fit=crop&auto=format&q=80',
+    link: 'https://www.houseoffinancekenya.com',
   },
   {
-    badge: '80% calls automated',
+    badge: 'Live Website',
     num: 'No. 04',
-    title: 'Real Estate Agency',
-    desc: '24/7 AI voice agent handling property inquiries, scheduling viewings, and qualifying leads. Now manages 80% of all inbound calls.',
-    img: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=500&h=280&fit=crop&auto=format&q=80',
-    link: null,
+    title: 'Gemonet Tours & Safaris',
+    desc: 'Wildlife safari and tour booking platform featuring stunning destination galleries, interactive itineraries, and seamless booking integration. Showcases Kenya\'s finest safari experiences for international travelers.',
+    img: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=500&h=280&fit=crop&auto=format&q=80',
+    link: 'https://www.gemonettoursandsafaris.com',
   },
 ]
 
@@ -182,22 +182,22 @@ const whyUs = [
 
 const testimonials = [
   {
-    text: 'NexaFlow rebuilt our entire online store. Within the first month, our conversion rate had doubled. The M-Pesa integration alone changed everything for us.',
-    name: 'Sarah Mwangi',
-    role: 'Founder, BrightWave Studios',
-    initials: 'SM',
+    text: 'NexaFlow built our financial advisory website with precision and sophistication. The dark-themed design perfectly captures our brand, and the automated contact system has significantly improved client inquiries.',
+    name: 'Solomon Desita',
+    role: 'Principal, House of Finance Kenya',
+    initials: 'SD',
+  },
+  {
+    text: 'Our safari booking platform now showcases Kenya\'s beauty to the world. The interactive galleries and seamless booking flow have transformed how international travelers discover and book our tours.',
+    name: 'Grace Muthoni',
+    role: 'Director, Gemonet Tours & Safaris',
+    initials: 'GM',
   },
   {
     text: 'The AI voice agent handles our property inquiries flawlessly. Our team now focuses on closing deals instead of answering the same questions all day.',
     name: 'James Ochieng',
     role: 'Director, CloudHaven Digital',
     initials: 'JO',
-  },
-  {
-    text: 'We went from manually replying to hundreds of WhatsApp messages to fully automated order tracking and support. Our customers love the instant responses.',
-    name: 'Aminah Hassan',
-    role: 'COO, SparkLine Innovations',
-    initials: 'AH',
   },
 ]
 
