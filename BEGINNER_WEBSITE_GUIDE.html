@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>BEGINNER_WEBSITE_GUIDE</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css" />
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a
+href="#complete-beginners-guide-build-websites-with-kimi-ai-github-netlify"
+id="toc-complete-beginners-guide-build-websites-with-kimi-ai-github-netlify">Complete
+Beginner’s Guide: Build Websites with Kimi AI + GitHub + Netlify</a>
+<ul>
+<li><a href="#your-journey-to-becoming-a-website-developer"
+id="toc-your-journey-to-becoming-a-website-developer">Your Journey to
+Becoming a Website Developer</a></li>
+<li><a href="#part-1-what-you-need-to-know-first"
+id="toc-part-1-what-you-need-to-know-first">PART 1: WHAT YOU NEED TO
+KNOW FIRST</a>
+<ul>
+<li><a href="#what-is-kimi-ai" id="toc-what-is-kimi-ai">What is Kimi
+AI?</a></li>
+<li><a href="#what-is-github" id="toc-what-is-github">What is
+GitHub?</a></li>
+<li><a href="#what-is-netlify" id="toc-what-is-netlify">What is
+Netlify?</a></li>
+<li><a href="#what-you-will-build" id="toc-what-you-will-build">What You
+Will Build</a></li>
+</ul></li>
+<li><a href="#part-2-setting-up-your-accounts"
+id="toc-part-2-setting-up-your-accounts">PART 2: SETTING UP YOUR
+ACCOUNTS</a>
+<ul>
+<li><a href="#step-1-create-a-github-account"
+id="toc-step-1-create-a-github-account">Step 1: Create a GitHub
+Account</a></li>
+<li><a href="#step-2-create-a-netlify-account"
+id="toc-step-2-create-a-netlify-account">Step 2: Create a Netlify
+Account</a></li>
+<li><a href="#step-3-set-up-kimi-ai-access"
+id="toc-step-3-set-up-kimi-ai-access">Step 3: Set Up Kimi AI
+Access</a></li>
+</ul></li>
+<li><a href="#part-3-creating-your-first-website-with-kimi-ai"
+id="toc-part-3-creating-your-first-website-with-kimi-ai">PART 3:
+CREATING YOUR FIRST WEBSITE WITH KIMI AI</a>
+<ul>
+<li><a href="#understanding-website-basics"
+id="toc-understanding-website-basics">Understanding Website
+Basics</a></li>
+<li><a href="#step-4-plan-your-website"
+id="toc-step-4-plan-your-website">Step 4: Plan Your Website</a></li>
+<li><a href="#step-5-ask-kimi-ai-to-generate-your-website"
+id="toc-step-5-ask-kimi-ai-to-generate-your-website">Step 5: Ask Kimi AI
+to Generate Your Website</a></li>
+<li><a href="#step-6-review-and-refine-the-code"
+id="toc-step-6-review-and-refine-the-code">Step 6: Review and Refine the
+Code</a></li>
+<li><a href="#step-7-get-all-your-pages"
+id="toc-step-7-get-all-your-pages">Step 7: Get All Your Pages</a></li>
+</ul></li>
+<li><a href="#part-4-storing-your-code-on-github"
+id="toc-part-4-storing-your-code-on-github">PART 4: STORING YOUR CODE ON
+GITHUB</a>
+<ul>
+<li><a href="#step-8-create-a-repository"
+id="toc-step-8-create-a-repository">Step 8: Create a Repository</a></li>
+<li><a href="#step-9-upload-your-website-files"
+id="toc-step-9-upload-your-website-files">Step 9: Upload Your Website
+Files</a></li>
+<li><a href="#step-10-organize-your-files"
+id="toc-step-10-organize-your-files">Step 10: Organize Your
+Files</a></li>
+</ul></li>
+<li><a href="#part-5-deploying-to-netlify-making-your-site-live"
+id="toc-part-5-deploying-to-netlify-making-your-site-live">PART 5:
+DEPLOYING TO NETLIFY (MAKING YOUR SITE LIVE)</a>
+<ul>
+<li><a href="#step-11-connect-github-to-netlify"
+id="toc-step-11-connect-github-to-netlify">Step 11: Connect GitHub to
+Netlify</a></li>
+<li><a href="#step-12-your-site-is-live"
+id="toc-step-12-your-site-is-live">Step 12: Your Site is Live</a></li>
+<li><a href="#step-13-set-a-custom-domain-optional-but-recommended"
+id="toc-step-13-set-a-custom-domain-optional-but-recommended">Step 13:
+Set a Custom Domain (Optional but Recommended)</a></li>
+</ul></li>
+<li><a href="#part-6-connecting-a-contact-form"
+id="toc-part-6-connecting-a-contact-form">PART 6: CONNECTING A CONTACT
+FORM</a>
+<ul>
+<li><a href="#step-14-add-a-netlify-form"
+id="toc-step-14-add-a-netlify-form">Step 14: Add a Netlify Form</a></li>
+<li><a href="#step-15-test-your-form"
+id="toc-step-15-test-your-form">Step 15: Test Your Form</a></li>
+</ul></li>
+<li><a href="#part-7-updating-your-website"
+id="toc-part-7-updating-your-website">PART 7: UPDATING YOUR WEBSITE</a>
+<ul>
+<li><a href="#step-16-making-changes"
+id="toc-step-16-making-changes">Step 16: Making Changes</a></li>
+<li><a href="#step-17-adding-new-pages"
+id="toc-step-17-adding-new-pages">Step 17: Adding New Pages</a></li>
+</ul></li>
+<li><a href="#part-8-advanced-features"
+id="toc-part-8-advanced-features">PART 8: ADVANCED FEATURES</a>
+<ul>
+<li><a href="#adding-a-blog" id="toc-adding-a-blog">Adding a
+Blog</a></li>
+<li><a href="#adding-google-analytics"
+id="toc-adding-google-analytics">Adding Google Analytics</a></li>
+<li><a href="#seo-basics" id="toc-seo-basics">SEO Basics</a></li>
+<li><a href="#adding-a-favicon" id="toc-adding-a-favicon">Adding a
+Favicon</a></li>
+</ul></li>
+<li><a href="#part-9-common-problems-and-solutions"
+id="toc-part-9-common-problems-and-solutions">PART 9: COMMON PROBLEMS
+AND SOLUTIONS</a>
+<ul>
+<li><a href="#problem-1-changes-not-showing-on-live-site"
+id="toc-problem-1-changes-not-showing-on-live-site">Problem 1: Changes
+Not Showing on Live Site</a></li>
+<li><a href="#problem-2-images-not-loading"
+id="toc-problem-2-images-not-loading">Problem 2: Images Not
+Loading</a></li>
+<li><a href="#problem-3-website-looks-different-on-phone"
+id="toc-problem-3-website-looks-different-on-phone">Problem 3: Website
+Looks Different on Phone</a></li>
+<li><a href="#problem-4-form-submissions-not-working"
+id="toc-problem-4-form-submissions-not-working">Problem 4: Form
+Submissions Not Working</a></li>
+<li><a href="#problem-5-domain-not-connecting"
+id="toc-problem-5-domain-not-connecting">Problem 5: Domain Not
+Connecting</a></li>
+</ul></li>
+<li><a href="#part-10-your-learning-path-forward"
+id="toc-part-10-your-learning-path-forward">PART 10: YOUR LEARNING PATH
+FORWARD</a>
+<ul>
+<li><a href="#week-1-2-get-comfortable"
+id="toc-week-1-2-get-comfortable">Week 1-2: Get Comfortable</a></li>
+<li><a href="#week-3-4-learn-the-basics"
+id="toc-week-3-4-learn-the-basics">Week 3-4: Learn the Basics</a></li>
+<li><a href="#month-2-expand-your-skills"
+id="toc-month-2-expand-your-skills">Month 2: Expand Your Skills</a></li>
+<li><a href="#month-3-professional-level"
+id="toc-month-3-professional-level">Month 3: Professional Level</a></li>
+<li><a href="#ongoing-stay-updated"
+id="toc-ongoing-stay-updated">Ongoing: Stay Updated</a></li>
+</ul></li>
+<li><a href="#quick-reference-cheat-sheet"
+id="toc-quick-reference-cheat-sheet">QUICK REFERENCE CHEAT SHEET</a>
+<ul>
+<li><a href="#essential-kimi-ai-prompts"
+id="toc-essential-kimi-ai-prompts">Essential Kimi AI Prompts</a></li>
+<li><a href="#essential-github-actions"
+id="toc-essential-github-actions">Essential GitHub Actions</a></li>
+<li><a href="#essential-netlify-actions"
+id="toc-essential-netlify-actions">Essential Netlify Actions</a></li>
+</ul></li>
+<li><a href="#final-checklist-before-you-start"
+id="toc-final-checklist-before-you-start">FINAL CHECKLIST: BEFORE YOU
+START</a></li>
+<li><a href="#remember" id="toc-remember">REMEMBER</a></li>
+</ul></li>
+</ul>
+</nav>
+<h1
+id="complete-beginners-guide-build-websites-with-kimi-ai-github-netlify">Complete
+Beginner’s Guide: Build Websites with Kimi AI + GitHub + Netlify</h1>
+<h2 id="your-journey-to-becoming-a-website-developer">Your Journey to
+Becoming a Website Developer</h2>
+<hr />
+<h2 id="part-1-what-you-need-to-know-first">PART 1: WHAT YOU NEED TO
+KNOW FIRST</h2>
+<h3 id="what-is-kimi-ai">What is Kimi AI?</h3>
+<p>Kimi AI is an artificial intelligence assistant that can write code
+for you. You tell it what you want your website to look like and do, and
+it generates the HTML, CSS, and JavaScript code. Think of it as a smart
+partner that does the heavy coding while you focus on design and
+ideas.</p>
+<h3 id="what-is-github">What is GitHub?</h3>
+<p>GitHub is a website where you store your code safely online. It is
+like Google Drive but specifically for code. It keeps track of every
+change you make, allows you to collaborate with others, and connects to
+Netlify to automatically deploy your website every time you make
+changes.</p>
+<h3 id="what-is-netlify">What is Netlify?</h3>
+<p>Netlify is a service that takes your code from GitHub and turns it
+into a live website that anyone in the world can visit. You do not need
+to buy a server or learn complex server management. Netlify does it all
+for you for free.</p>
+<h3 id="what-you-will-build">What You Will Build</h3>
+<p>By the end of this guide, you will have: 1. A GitHub account and
+repository 2. A professional website built with Kimi AI 3. A live
+website on Netlify with a custom domain 4. The knowledge to update and
+improve your site anytime</p>
+<hr />
+<h2 id="part-2-setting-up-your-accounts">PART 2: SETTING UP YOUR
+ACCOUNTS</h2>
+<h3 id="step-1-create-a-github-account">Step 1: Create a GitHub
+Account</h3>
+<ol type="1">
+<li>Open your web browser and go to github.com</li>
+<li>Click the green “Sign up” button</li>
+<li>Enter your email address</li>
+<li>Create a strong password (use letters, numbers, and symbols)</li>
+<li>Choose a username (this will be part of your public profile, so pick
+something professional)</li>
+<li>Solve the verification puzzle if asked</li>
+<li>Click “Create account”</li>
+<li>Check your email for a verification code from GitHub</li>
+<li>Enter the code on the GitHub website</li>
+<li>Answer the questions about your experience level (it is okay to say
+beginner)</li>
+<li>Click “Complete setup”</li>
+</ol>
+<p><strong>Important:</strong> Write down your username, email, and
+password somewhere safe. You will need them often.</p>
+<h3 id="step-2-create-a-netlify-account">Step 2: Create a Netlify
+Account</h3>
+<ol type="1">
+<li>Open your browser and go to netlify.com</li>
+<li>Click “Sign up” in the top right corner</li>
+<li>Choose “Sign up with GitHub” (this is the easiest way)</li>
+<li>Authorize Netlify to access your GitHub account</li>
+<li>Click “Authorize Netlify”</li>
+<li>Fill in your name and click “Continue”</li>
+<li>You can skip the team setup by clicking “Skip for now”</li>
+</ol>
+<p>Your Netlify account is now connected to your GitHub account. This
+connection is what allows automatic deployment.</p>
+<h3 id="step-3-set-up-kimi-ai-access">Step 3: Set Up Kimi AI Access</h3>
+<ol type="1">
+<li>Open your browser and go to kimi.moonshot.cn (or the Kimi platform
+you have access to)</li>
+<li>Create an account using your email or phone number</li>
+<li>Complete the registration process</li>
+<li>You are now ready to start asking Kimi AI to write code for you</li>
+</ol>
+<hr />
+<h2 id="part-3-creating-your-first-website-with-kimi-ai">PART 3:
+CREATING YOUR FIRST WEBSITE WITH KIMI AI</h2>
+<h3 id="understanding-website-basics">Understanding Website Basics</h3>
+<p>A website is made of three main technologies: - <strong>HTML</strong>
+(HyperText Markup Language): The structure and content of your website
+(text, images, headings, buttons) - <strong>CSS</strong> (Cascading
+Style Sheets): The design and appearance (colors, fonts, spacing,
+layout) - <strong>JavaScript</strong>: The interactivity (animations,
+forms, dynamic content)</p>
+<p>Kimi AI can generate all three for you.</p>
+<h3 id="step-4-plan-your-website">Step 4: Plan Your Website</h3>
+<p>Before asking Kimi AI to code, plan what you want:</p>
+<ol type="1">
+<li><strong>What is the purpose of your website?</strong>
+<ul>
+<li>Business website (show services, contact info)</li>
+<li>Personal portfolio (show your work)</li>
+<li>Blog (write articles)</li>
+<li>E-commerce (sell products)</li>
+</ul></li>
+<li><strong>What sections do you need?</strong>
+<ul>
+<li>Home page (hero section, about, services)</li>
+<li>About page</li>
+<li>Services/Products page</li>
+<li>Contact page</li>
+<li>Blog page</li>
+</ul></li>
+<li><strong>What style do you want?</strong>
+<ul>
+<li>Modern and minimal</li>
+<li>Bold and colorful</li>
+<li>Professional and corporate</li>
+<li>Creative and artistic</li>
+</ul></li>
+<li><strong>What colors?</strong>
+<ul>
+<li>Pick a primary color (your main brand color)</li>
+<li>Pick a secondary color (for accents)</li>
+<li>Pick a background color</li>
+</ul></li>
+</ol>
+<p><strong>Example Plan:</strong> - Purpose: Business website for a web
+design agency - Sections: Home, Services, Portfolio, Pricing, Contact -
+Style: Modern, dark theme with gold accents - Colors: Dark navy
+(#0a0f1a), Gold (#c9a227), White text</p>
+<h3 id="step-5-ask-kimi-ai-to-generate-your-website">Step 5: Ask Kimi AI
+to Generate Your Website</h3>
+<p>Here is exactly how to talk to Kimi AI to get the best results:</p>
+<h4 id="prompt-template-for-kimi-ai">Prompt Template for Kimi AI:</h4>
+<pre><code>I want to create a professional website for my [business type]. 
+
+Here are the details:
+- Business name: [Your Business Name]
+- What we do: [Short description]
+- Location: [Your City, Country]
+- Contact: [Phone number], [Email]
+
+I need these pages:
+1. Home page with hero section, about us, services, and contact form
+2. Services page listing what we offer
+3. Contact page with form and map
+
+Design requirements:
+- Style: [modern/minimal/bold/professional]
+- Primary color: [color code or name]
+- Secondary color: [color code or name]
+- Must be mobile responsive (works on phones)
+- Must have smooth animations
+- Must include a navigation menu
+- Must have a footer with social links
+
+Please generate the complete HTML, CSS, and JavaScript code for this website. Give me one complete file for the homepage first, and then additional files for other pages.</code></pre>
+<h4 id="example-prompt-copy-and-modify">Example Prompt (Copy and
+modify):</h4>
+<pre><code>I want to create a professional website for my web design agency called &quot;NexaFlow Digital&quot;.
+
+Here are the details:
+- Business name: NexaFlow Digital
+- What we do: We create websites, mobile apps, and AI automation for businesses in Kenya
+- Location: Nairobi, Kenya
+- Contact: +254 106 216 699, support@nexaflow.com
+
+I need these pages:
+1. Home page with hero section, services, portfolio, pricing, and contact form
+2. Services page with detailed service descriptions
+3. Contact page with form and contact info
+
+Design requirements:
+- Style: Modern, premium, dark theme
+- Primary color: Dark navy #0a0f1a
+- Accent color: Gold #c9a227
+- Text color: White #f8fafc
+- Must be mobile responsive
+- Must have smooth scroll animations
+- Must include navigation menu with logo
+- Must have WhatsApp chat button
+- Must have footer with links
+
+Please generate the complete HTML code for the homepage. Include CSS in a style tag and JavaScript in a script tag so it is one complete file.</code></pre>
+<h3 id="step-6-review-and-refine-the-code">Step 6: Review and Refine the
+Code</h3>
+<p>Kimi AI will give you code. Here is what to check:</p>
+<ol type="1">
+<li><p><strong>Does the code have these essential parts?</strong></p>
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">html</span> <span class="er">lang</span><span class="ot">=</span><span class="st">&quot;en&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span> <span class="er">charset</span><span class="ot">=</span><span class="st">&quot;UTF-8&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;viewport&quot;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Your Page Title<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>        <span class="co">/* CSS styles here */</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">style</span><span class="dt">&gt;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="co">&lt;!-- HTML content here --&gt;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="co">// JavaScript here</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;/</span><span class="kw">script</span><span class="dt">&gt;</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">body</span><span class="dt">&gt;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">html</span><span class="dt">&gt;</span></span></code></pre></div></li>
+<li><p><strong>Check the title tag</strong> — this is what appears in
+browser tabs and Google search results</p></li>
+<li><p><strong>Check that images use URLs</strong> not local paths like
+<code>/images/photo.jpg</code> — for now, use URLs from unsplash.com or
+similar</p></li>
+<li><p><strong>If something looks wrong</strong>, tell Kimi AI:</p>
+<pre><code>The navigation menu is not sticky when I scroll. Can you fix that?</code></pre>
+<p>or</p>
+<pre><code>The contact form does not have a submit button. Please add one.</code></pre></li>
+</ol>
+<h3 id="step-7-get-all-your-pages">Step 7: Get All Your Pages</h3>
+<p>After getting the homepage, ask Kimi AI for the other pages:</p>
+<pre><code>Now give me the complete code for the Services page. Use the same design style, colors, and navigation as the homepage.</code></pre>
+<p>Then:</p>
+<pre><code>Now give me the complete code for the Contact page. Include a working contact form.</code></pre>
+<p>Save each file with a clear name: - <code>index.html</code> (this
+MUST be your homepage — it is the default page) -
+<code>services.html</code> - <code>contact.html</code></p>
+<hr />
+<h2 id="part-4-storing-your-code-on-github">PART 4: STORING YOUR CODE ON
+GITHUB</h2>
+<h3 id="step-8-create-a-repository">Step 8: Create a Repository</h3>
+<p>A repository (repo) is like a folder on GitHub where your website
+code lives.</p>
+<ol type="1">
+<li>Log in to github.com</li>
+<li>Click the green “+” button in the top right corner</li>
+<li>Click “New repository”</li>
+<li>Name your repository: <code>my-website</code> (or any name you
+prefer)</li>
+<li>Make it “Public” (so Netlify can access it)</li>
+<li>Check the box that says “Add a README file”</li>
+<li>Click “Create repository”</li>
+</ol>
+<h3 id="step-9-upload-your-website-files">Step 9: Upload Your Website
+Files</h3>
+<p><strong>Method A: Upload via Web (Easiest for Beginners)</strong></p>
+<ol type="1">
+<li>In your new repository, click the “Add file” button</li>
+<li>Click “Upload files”</li>
+<li>Drag and drop your HTML files (index.html, services.html,
+contact.html)</li>
+<li>Scroll down and click “Commit changes”</li>
+</ol>
+<p><strong>Method B: Edit Directly on GitHub</strong></p>
+<ol type="1">
+<li>In your repository, click “Add file”</li>
+<li>Click “Create new file”</li>
+<li>Name it <code>index.html</code></li>
+<li>Paste the code Kimi AI gave you</li>
+<li>Scroll down and click “Commit new file”</li>
+<li>Repeat for other pages</li>
+</ol>
+<h3 id="step-10-organize-your-files">Step 10: Organize Your Files</h3>
+<p>Your repository should look like this:</p>
+<pre><code>my-website/
+├── index.html          (homepage)
+├── services.html       (services page)
+├── contact.html        (contact page)
+├── privacy.html        (privacy policy)
+├── README.md           (GitHub automatically created this)
+└── images/             (folder for images, optional)</code></pre>
+<p>To create a folder for images: 1. Click “Add file” → “Create new
+file” 2. Type: <code>images/README.md</code> (this creates the images
+folder) 3. Type anything in the file 4. Click “Commit new file”</p>
+<hr />
+<h2 id="part-5-deploying-to-netlify-making-your-site-live">PART 5:
+DEPLOYING TO NETLIFY (MAKING YOUR SITE LIVE)</h2>
+<h3 id="step-11-connect-github-to-netlify">Step 11: Connect GitHub to
+Netlify</h3>
+<ol type="1">
+<li>Go to netlify.com and log in</li>
+<li>On your dashboard, click “Add new site” → “Import an existing
+project”</li>
+<li>Click “GitHub” as your Git provider</li>
+<li>Authorize Netlify if asked</li>
+<li>Find and click on your repository (<code>my-website</code>)</li>
+<li>Click “Deploy site”</li>
+</ol>
+<p>Netlify will now: - Download your code from GitHub - Process it -
+Give you a live website URL</p>
+<p>This takes about 1-2 minutes.</p>
+<h3 id="step-12-your-site-is-live">Step 12: Your Site is Live</h3>
+<ol type="1">
+<li>Netlify will show you a random URL like:
+<code>https://happy-fox-123456.netlify.app</code></li>
+<li>Click the URL to see your live website</li>
+<li>Your website is now accessible to anyone in the world</li>
+</ol>
+<h3 id="step-13-set-a-custom-domain-optional-but-recommended">Step 13:
+Set a Custom Domain (Optional but Recommended)</h3>
+<p><strong>Free Netlify Domain:</strong> Your site works on the Netlify
+URL for free forever.</p>
+<p><strong>Custom Domain (like yourname.com):</strong> 1. Buy a domain
+from a registrar like Namecheap, GoDaddy, or HostPinnacle 2. In Netlify,
+go to “Site settings” → “Domain management” 3. Click “Add custom domain”
+4. Enter your domain name 5. Follow Netlify’s DNS instructions (they
+will guide you) 6. Wait 24-48 hours for the domain to connect</p>
+<hr />
+<h2 id="part-6-connecting-a-contact-form">PART 6: CONNECTING A CONTACT
+FORM</h2>
+<h3 id="step-14-add-a-netlify-form">Step 14: Add a Netlify Form</h3>
+<p>Netlify can handle form submissions for free. Here is how:</p>
+<ol type="1">
+<li><p>In your <code>contact.html</code>, find the
+<code>&lt;form&gt;</code> tag</p></li>
+<li><p>Change it to:</p>
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">form</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;contact&quot;</span> <span class="er">method</span><span class="ot">=</span><span class="st">&quot;POST&quot;</span> <span class="er">data-netlify</span><span class="ot">=</span><span class="st">&quot;true&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;text&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;name&quot;</span> <span class="er">placeholder</span><span class="ot">=</span><span class="st">&quot;Your Name&quot;</span> <span class="er">required</span><span class="dt">&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;email&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;email&quot;</span> <span class="er">placeholder</span><span class="ot">=</span><span class="st">&quot;Your Email&quot;</span> <span class="er">required</span><span class="dt">&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">textarea</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;message&quot;</span> <span class="er">placeholder</span><span class="ot">=</span><span class="st">&quot;Your Message&quot;</span> <span class="er">required</span><span class="dt">&gt;&lt;/</span><span class="kw">textarea</span><span class="dt">&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">button</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;submit&quot;</span><span class="dt">&gt;</span>Send Message<span class="dt">&lt;/</span><span class="kw">button</span><span class="dt">&gt;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">form</span><span class="dt">&gt;</span></span></code></pre></div></li>
+<li><p>The key parts are:</p>
+<ul>
+<li><code>name="contact"</code> (gives the form a name)</li>
+<li><code>method="POST"</code> (sends data securely)</li>
+<li><code>data-netlify="true"</code> (tells Netlify to handle this
+form)</li>
+</ul></li>
+<li><p>Save the file and commit to GitHub</p></li>
+<li><p>Netlify will automatically update your site</p></li>
+<li><p>Form submissions will appear in your Netlify dashboard under
+“Forms”</p></li>
+</ol>
+<h3 id="step-15-test-your-form">Step 15: Test Your Form</h3>
+<ol type="1">
+<li>Go to your live website</li>
+<li>Fill out the contact form</li>
+<li>Click submit</li>
+<li>Check your Netlify dashboard → “Forms” → “Active forms”</li>
+<li>You should see the submission there</li>
+</ol>
+<hr />
+<h2 id="part-7-updating-your-website">PART 7: UPDATING YOUR WEBSITE</h2>
+<h3 id="step-16-making-changes">Step 16: Making Changes</h3>
+<p>Whenever you want to update your website:</p>
+<ol type="1">
+<li>Ask Kimi AI for the new code or changes</li>
+<li>Go to your GitHub repository</li>
+<li>Find the file you want to edit</li>
+<li>Click the pencil icon (Edit this file)</li>
+<li>Make your changes</li>
+<li>Scroll down and write a brief description of what you changed</li>
+<li>Click “Commit changes”</li>
+<li>Netlify automatically detects the change and redeploys your site
+(takes 1-2 minutes)</li>
+</ol>
+<h3 id="step-17-adding-new-pages">Step 17: Adding New Pages</h3>
+<ol type="1">
+<li>Ask Kimi AI to generate a new page (e.g., “Create a Blog page”)</li>
+<li>On GitHub, click “Add file” → “Create new file”</li>
+<li>Name it (e.g., <code>blog.html</code>)</li>
+<li>Paste the code</li>
+<li>Commit the file</li>
+<li>Netlify automatically deploys it</li>
+<li>Access it at <code>your-site.netlify.app/blog.html</code></li>
+</ol>
+<hr />
+<h2 id="part-8-advanced-features">PART 8: ADVANCED FEATURES</h2>
+<h3 id="adding-a-blog">Adding a Blog</h3>
+<p>For a simple blog without a database:</p>
+<ol type="1">
+<li>Create <code>blog.html</code> as your blog index page</li>
+<li>Create individual article files like:
+<ul>
+<li><code>blog/my-first-article.html</code></li>
+<li><code>blog/why-websites-matter.html</code></li>
+</ul></li>
+<li>Link them from your blog index page</li>
+</ol>
+<p>For a more advanced blog, consider using a static site generator like
+Hugo or Jekyll (learn these after you are comfortable with basic
+HTML).</p>
+<h3 id="adding-google-analytics">Adding Google Analytics</h3>
+<ol type="1">
+<li>Go to analytics.google.com</li>
+<li>Create an account</li>
+<li>Get your tracking code (looks like <code>G-XXXXXXXXXX</code>)</li>
+<li>Ask Kimi AI: “Add Google Analytics tracking code G-XXXXXXXXXX to my
+website”</li>
+<li>Kimi AI will give you a small script to add before the closing
+<code>&lt;/head&gt;</code> tag</li>
+<li>Add it to all your pages</li>
+</ol>
+<h3 id="seo-basics">SEO Basics</h3>
+<p>For each page, make sure you have:</p>
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">head</span><span class="dt">&gt;</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">title</span><span class="dt">&gt;</span>Page Title | Your Brand Name<span class="dt">&lt;/</span><span class="kw">title</span><span class="dt">&gt;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;description&quot;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;Brief description of this page (150 characters max)&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">meta</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;keywords&quot;</span> <span class="er">content</span><span class="ot">=</span><span class="st">&quot;keyword1, keyword2, keyword3&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&lt;</span><span class="kw">link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;canonical&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;https://your-site.com/page.html&quot;</span><span class="dt">&gt;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">head</span><span class="dt">&gt;</span></span></code></pre></div>
+<p>Ask Kimi AI to generate these for each page.</p>
+<h3 id="adding-a-favicon">Adding a Favicon</h3>
+<p>A favicon is the small icon in the browser tab.</p>
+<ol type="1">
+<li><p>Create a square image (32x32 or 64x64 pixels)</p></li>
+<li><p>Convert it to .ico format using a free online converter</p></li>
+<li><p>Name it <code>favicon.ico</code></p></li>
+<li><p>Upload it to your GitHub repository root</p></li>
+<li><p>Add this to your HTML <code>&lt;head&gt;</code>:</p>
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode html"><code class="sourceCode html"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;icon&quot;</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;image/x-icon&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;/favicon.ico&quot;</span><span class="dt">&gt;</span></span></code></pre></div></li>
+</ol>
+<hr />
+<h2 id="part-9-common-problems-and-solutions">PART 9: COMMON PROBLEMS
+AND SOLUTIONS</h2>
+<h3 id="problem-1-changes-not-showing-on-live-site">Problem 1: Changes
+Not Showing on Live Site</h3>
+<p><strong>Solution:</strong> Netlify takes 1-2 minutes to deploy. Wait
+and refresh. If still not showing, check that you committed the changes
+to GitHub.</p>
+<h3 id="problem-2-images-not-loading">Problem 2: Images Not Loading</h3>
+<p><strong>Solution:</strong> Make sure image URLs are complete (start
+with https://). If using local images, they must be in your GitHub
+repository.</p>
+<h3 id="problem-3-website-looks-different-on-phone">Problem 3: Website
+Looks Different on Phone</h3>
+<p><strong>Solution:</strong> Tell Kimi AI: “Make sure this is mobile
+responsive. Add media queries for screens smaller than 768px.”</p>
+<h3 id="problem-4-form-submissions-not-working">Problem 4: Form
+Submissions Not Working</h3>
+<p><strong>Solution:</strong> Check that your form has
+<code>data-netlify="true"</code>. Make sure you redeployed after adding
+the form. Test on the live URL, not just locally.</p>
+<h3 id="problem-5-domain-not-connecting">Problem 5: Domain Not
+Connecting</h3>
+<p><strong>Solution:</strong> DNS changes take 24-48 hours. Double-check
+that you entered the correct DNS records in your domain registrar.</p>
+<hr />
+<h2 id="part-10-your-learning-path-forward">PART 10: YOUR LEARNING PATH
+FORWARD</h2>
+<h3 id="week-1-2-get-comfortable">Week 1-2: Get Comfortable</h3>
+<ul>
+<li>Build 1-2 simple websites using this guide</li>
+<li>Practice asking Kimi AI for different features</li>
+<li>Learn to read basic HTML and CSS</li>
+</ul>
+<h3 id="week-3-4-learn-the-basics">Week 3-4: Learn the Basics</h3>
+<ul>
+<li>Learn what HTML tags do (div, section, h1, p, a, img)</li>
+<li>Learn CSS basics (colors, fonts, margins, padding, flexbox)</li>
+<li>Learn how to use browser developer tools (right-click →
+Inspect)</li>
+</ul>
+<h3 id="month-2-expand-your-skills">Month 2: Expand Your Skills</h3>
+<ul>
+<li>Learn JavaScript basics (variables, functions, events)</li>
+<li>Learn how to use a CSS framework like Tailwind CSS</li>
+<li>Build a multi-page website with navigation</li>
+</ul>
+<h3 id="month-3-professional-level">Month 3: Professional Level</h3>
+<ul>
+<li>Learn about React or Vue.js (modern JavaScript frameworks)</li>
+<li>Learn about responsive design patterns</li>
+<li>Build a portfolio of 3-5 websites</li>
+</ul>
+<h3 id="ongoing-stay-updated">Ongoing: Stay Updated</h3>
+<ul>
+<li>Follow web development blogs</li>
+<li>Join Kenyan tech communities on WhatsApp and Telegram</li>
+<li>Watch YouTube tutorials</li>
+<li>Keep experimenting with Kimi AI for new features</li>
+</ul>
+<hr />
+<h2 id="quick-reference-cheat-sheet">QUICK REFERENCE CHEAT SHEET</h2>
+<h3 id="essential-kimi-ai-prompts">Essential Kimi AI Prompts</h3>
+<p><strong>Generate a complete website:</strong></p>
+<pre><code>Create a [type] website for [business name]. Include [list pages]. Use [colors]. Make it mobile responsive.</code></pre>
+<p><strong>Add a feature:</strong></p>
+<pre><code>Add a [feature name] to my website. Here is my current code: [paste code]</code></pre>
+<p><strong>Fix a problem:</strong></p>
+<pre><code>This [element] is not [working properly]. Here is the code: [paste code]. Please fix it.</code></pre>
+<p><strong>Make it responsive:</strong></p>
+<pre><code>Make this website mobile responsive. Add media queries for screens smaller than 768px.</code></pre>
+<h3 id="essential-github-actions">Essential GitHub Actions</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Action</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Upload file</td>
+<td>Click “Add file” → “Upload files”</td>
+</tr>
+<tr class="even">
+<td>Edit file</td>
+<td>Click file → Click pencil icon</td>
+</tr>
+<tr class="odd">
+<td>Create new file</td>
+<td>Click “Add file” → “Create new file”</td>
+</tr>
+<tr class="even">
+<td>Create folder</td>
+<td>Create file with name <code>foldername/README.md</code></td>
+</tr>
+<tr class="odd">
+<td>View history</td>
+<td>Click “Commits” at top of repo</td>
+</tr>
+</tbody>
+</table>
+<h3 id="essential-netlify-actions">Essential Netlify Actions</h3>
+<table>
+<thead>
+<tr class="header">
+<th>Action</th>
+<th>How</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>See deployed site</td>
+<td>Click the URL on your dashboard</td>
+</tr>
+<tr class="even">
+<td>View form submissions</td>
+<td>Dashboard → Forms → Active forms</td>
+</tr>
+<tr class="odd">
+<td>Add custom domain</td>
+<td>Site settings → Domain management</td>
+</tr>
+<tr class="even">
+<td>Check deploy status</td>
+<td>Click on your site → Deploys tab</td>
+</tr>
+<tr class="odd">
+<td>Redeploy manually</td>
+<td>Click “Trigger deploy”</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="final-checklist-before-you-start">FINAL CHECKLIST: BEFORE YOU
+START</h2>
+<ul class="task-list">
+<li><label><input type="checkbox" />GitHub account created</label></li>
+<li><label><input type="checkbox" />Netlify account created (linked to
+GitHub)</label></li>
+<li><label><input type="checkbox" />Kimi AI access ready</label></li>
+<li><label><input type="checkbox" />Website plan written down (purpose,
+pages, colors)</label></li>
+<li><label><input type="checkbox" />Business information ready (name,
+contact, description)</label></li>
+<li><label><input type="checkbox" />Images selected (or plan to use
+Unsplash URLs)</label></li>
+</ul>
+<hr />
+<h2 id="remember">REMEMBER</h2>
+<ol type="1">
+<li><strong>Start simple.</strong> Your first website does not need to
+be perfect.</li>
+<li><strong>Ask Kimi AI for help constantly.</strong> That is what it is
+for.</li>
+<li><strong>Commit to GitHub often.</strong> Every time you make a
+change, commit it.</li>
+<li><strong>Test on your phone.</strong> Always check how your site
+looks on mobile.</li>
+<li><strong>Google is your friend.</strong> If you get stuck, search for
+the error message.</li>
+<li><strong>Be patient.</strong> Learning takes time, but each website
+you build makes you faster.</li>
+<li><strong>Show your work.</strong> Share your websites with friends
+and ask for feedback.</li>
+</ol>
+<hr />
+<p><strong>You now have everything you need to start building
+professional websites. Go create something amazing!</strong></p>
+<hr />
+<p><em>Guide created for aspiring web developers in Kenya and
+beyond.</em> <em>Tools: Kimi AI, GitHub, Netlify</em> <em>Cost to start:
+FREE</em></p>
+</body>
+</html>
