@@ -155,6 +155,14 @@ const projects = [
     img: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=500&h=280&fit=crop&auto=format&q=80',
     link: 'https://www.gemonettoursandsafaris.com',
   },
+  {
+    badge: 'Live Platform',
+    num: 'No. 05',
+    title: 'MumoFreight Logistics',
+    desc: 'Professional freight forwarding & cargo logistics platform — real-time shipment tracking, instant quote generation, and seamless booking for domestic & international shipping across East Africa.',
+    img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=500&h=280&fit=crop&auto=format&q=80',
+    link: 'https://www.mumofreightcargo.com',
+  },
 ]
 
 const whyUs = [
@@ -646,7 +654,7 @@ export default function Home() {
       {/* ===== PORTFOLIO ===== */}
       <section id="work" style={{ padding: '4rem 0', background: '#0a0f1a' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 2rem' }}>
-          {sectionHeader('Projects that deliver real results', '4 Projects')}
+          {sectionHeader('Projects that deliver real results', '5 Projects')}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginTop: '3rem' }}>
             {projects.map(p => (
               <div key={p.title} style={{
