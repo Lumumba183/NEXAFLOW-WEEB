@@ -253,3 +253,46 @@ export const testimonials = [
     initials: 'JO',
   },
 ]
+
+export const automationChannels = [
+  'WhatsApp',
+  'Instagram',
+  'Facebook Messenger',
+  'Email',
+  'SMS',
+  'AI Call Center',
+  'Web Chat',
+]
+
+export const wedialaiFeatures = [
+  {
+    icon: '📞',
+    title: 'AI Voice Calling',
+    desc: 'Intelligent voice agents that handle inbound/outbound calls, book appointments, qualify leads, and serve customers 24/7.',
+  },
+  {
+    icon: '💬',
+    title: 'WhatsApp Business API',
+    desc: 'Full WhatsApp Business API integration with automated workflows, support, order updates, and marketing campaigns.',
+  },
+  {
+    icon: '🤖',
+    title: 'Multi-Channel Chat',
+    desc: 'Unified inbox across Instagram, Facebook Messenger, web chat, and email — all managed by one AI brain.',
+  },
+  {
+    icon: '🛒',
+    title: 'Shopify Integration',
+    desc: 'Connect your Shopify store for abandoned cart recovery, order updates, and customer support automation.',
+  },
+  {
+    icon: '📊',
+    title: 'Real-Time Analytics',
+    desc: 'Track every conversation, conversion, and customer interaction with detailed analytics dashboards.',
+  },
+  {
+    icon: '🏷️',
+    title: 'White-Label Ready',
+    desc: 'Launch your own branded AI platform with your logo, domain, and custom pricing. Your clients never know we exist.',
+  },
+]
