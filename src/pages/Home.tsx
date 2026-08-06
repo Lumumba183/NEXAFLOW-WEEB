@@ -52,70 +52,84 @@ const services = [
     title: 'E-Shop Design',
     desc: 'Complete online shop design with product catalogs, payment integration (M-Pesa included), inventory management, and mobile-optimized checkout.',
     img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=240&fit=crop&auto=format&q=80',
-    price: 'KSH 40,000',
+    price: 'KSH 65,000',
   },
   {
     num: '08',
     title: 'Web App + Android App',
     desc: 'Full-featured web application paired with a native Android app. Real-time data sync, push notifications, offline support, and scalable backend.',
     img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600&h=240&fit=crop&auto=format&q=80',
-    price: 'KSH 50,000',
+    price: 'From KSH 250,000',
   },
   {
     num: '09',
     title: 'WeDialAI White-Label',
     desc: 'Launch your own branded AI agent platform. Full white-label solution with your logo, domain, and custom pricing. Powered by our proven technology.',
     img: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=600&h=240&fit=crop&auto=format&q=80',
-    price: 'KSH 128,000',
+    price: 'KSH 250,000 + KSH 35,000/mo',
     link: 'https://wedialai.com',
   },
 ]
 
 const pricing = [
   {
-    name: 'Basic Package',
-    subtitle: '5 Pages — Price-sensitive clients',
-    price: 'KSH 6,500',
-    features: ['Contact form', 'Image gallery', 'Social media integration', 'Responsive design', 'FREE SSL Certificate'],
-    notIncluded: ['Professional email setup'],
+    name: 'Starter Package',
+    subtitle: 'Up to 5 Pages — Essential web presence',
+    price: 'KSH 18,000',
+    features: ['Contact form', 'Image gallery', 'Social media integration', 'Responsive design', 'FREE domain (year 1)', 'FREE SSL Certificate'],
+    notIncluded: ['Blog setup', 'Professional email setup'],
     popular: false,
   },
   {
-    name: 'Standard Package',
-    subtitle: '10 Pages — Growing businesses',
-    price: 'KSH 12,000',
-    features: ['Everything in Basic', 'Blog setup', 'Enhanced SEO', 'Google Business Profile', '3 months priority support', 'FREE SSL Certificate'],
+    name: 'Business Package',
+    subtitle: 'Up to 10 Pages — Growing businesses',
+    price: 'KSH 35,000',
+    features: ['Everything in Starter', 'Blog setup', 'Enhanced SEO', 'Google Business Profile', 'WhatsApp chat integration', '3 months priority support', 'FREE domain (year 1)', 'FREE SSL Certificate'],
     notIncluded: ['Professional email setup'],
     popular: true,
   },
   {
     name: 'Premium Package',
     subtitle: '10+ Pages — Established businesses',
-    price: 'KSH 18,000',
-    features: ['Everything in Standard', 'CMS integration', 'Advanced SEO', 'Analytics dashboard', '6 months priority support', 'Professional email setup', 'FREE SSL Certificate'],
+    price: 'KSH 55,000',
+    features: ['Everything in Business', 'CMS integration', 'Advanced SEO', 'Analytics dashboard', 'Professional email setup', '6 months priority support', 'FREE domain (year 1)', 'FREE SSL Certificate'],
     popular: false,
   },
 ]
 
 const additionalProducts = [
   {
-    name: 'E-Shop Design',
-    desc: 'Complete online shop with M-Pesa integration, product catalog, inventory management, and mobile checkout.',
-    price: 'KSH 40,000',
+    name: 'E-Shop Starter',
+    desc: 'Complete online shop with M-Pesa/card checkout, up to 30 products, inventory management, order emails, and mobile checkout.',
+    price: 'KSH 65,000',
     img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=280&fit=crop&auto=format&q=80',
     badge: 'E-COMMERCE',
   },
   {
+    name: 'E-Shop Growth',
+    desc: 'Up to 150 products, abandoned-cart recovery, customer accounts, coupons, delivery zones, and basic SEO.',
+    price: 'KSH 110,000',
+    img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=280&fit=crop&auto=format&q=80',
+    badge: 'E-COMMERCE',
+  },
+  {
+    name: 'E-Shop Pro / Marketplace',
+    desc: '150+ products, multi-vendor support, advanced features, courier integration, and 3-month support.',
+    price: 'From KSH 180,000',
+    img: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=500&h=280&fit=crop&auto=format&q=80',
+    badge: 'ENTERPRISE',
+  },
+  {
     name: 'Web App + Android App',
-    desc: 'Full-featured web application with native Android companion. Real-time sync, push notifications, offline mode.',
-    price: 'KSH 50,000',
+    desc: 'Full-featured web application with native Android companion. Real-time sync, push notifications, offline mode, scalable backend.',
+    price: 'From KSH 250,000',
     img: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=500&h=280&fit=crop&auto=format&q=80',
     badge: 'FULL STACK',
   },
   {
     name: 'WeDialAI White-Label',
-    desc: 'Your own branded AI agent platform. Voice calls, WhatsApp, social media — all under your brand.',
-    price: 'KSH 128,000',
+    desc: 'Your own branded AI agent platform. Voice calls, WhatsApp, social media — all under your brand. Setup + monthly licence.',
+    price: 'KSH 250,000 + KSH 35,000/mo',
     img: 'https://images.unsplash.com/photo-1633356122544-f134324a6cee?w=500&h=280&fit=crop&auto=format&q=80',
     badge: 'ENTERPRISE',
     link: 'https://wedialai.com',
@@ -397,7 +411,7 @@ export default function Home() {
           </h1>
           <p style={{ fontSize: '1.25rem', color: TEXT_MUTED, maxWidth: 650, margin: '0 auto 2.5rem', lineHeight: 1.7 }}>
             We build high-performance websites and intelligent AI systems that grow your business while you sleep. 
-            From KSH 6,500. Based in Nairobi, serving Kenya & beyond.
+            From KSH 18,000. Based in Nairobi, serving Kenya & beyond.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#pricing" style={{
@@ -532,7 +546,7 @@ export default function Home() {
                   onMouseLeave={e => { if (!p.popular) { e.currentTarget.style.borderColor = BORDER; e.currentTarget.style.background = 'transparent' }}}>
                   Get Started
                 </a>
-                <p style={{ textAlign: 'center', color: TEXT_MUTED, fontSize: '0.9rem', marginTop: '0.5rem' }}>Annual maintenance: KSH 2,000/year</p>
+                <p style={{ textAlign: 'center', color: TEXT_MUTED, fontSize: '0.9rem', marginTop: '0.5rem' }}>Care Plan Basic: KSH 3,500/mo | Standard: KSH 7,500/mo | Premium: KSH 15,000/mo</p>
               </div>
             ))}
           </div>
@@ -597,10 +611,17 @@ export default function Home() {
             </thead>
             <tbody>
               {[
-                { service: 'SEO Setup', price: 'KSH 3,000 – 5,000', freq: 'One-time' },
-                { service: 'Content Creation', price: 'KSH 1,500 – 3,000', freq: 'Per article' },
-                { service: 'Enhanced Maintenance', price: 'KSH 2,500 – 5,000', freq: 'Monthly' },
-                { service: 'Social Media Management', price: 'KSH 5,000 – 10,000', freq: 'Monthly' },
+                { service: 'SEO Setup (technical + on-page + GMB)', price: 'KSH 15,000', freq: 'One-time' },
+                { service: 'Monthly SEO (ongoing optimisation)', price: 'KSH 12,000 – 25,000', freq: 'Monthly' },
+                { service: 'Content Creation (SEO article, ~1,000–1,200 words)', price: 'KSH 3,500', freq: 'Per article' },
+                { service: 'Care Plan Basic — updates, backups, security', price: 'KSH 3,500/mo', freq: 'Monthly' },
+                { service: 'Care Plan Standard — + content edits (up to 5/mo)', price: 'KSH 7,500/mo', freq: 'Monthly' },
+                { service: 'Care Plan Premium — + SEO monitoring, unlimited minor edits', price: 'KSH 15,000/mo', freq: 'Monthly' },
+                { service: 'Social Media Management — Starter (12 posts, 2 platforms)', price: 'KSH 18,000/mo', freq: 'Monthly' },
+                { service: 'Social Media Management — Growth (20 posts + reels, 3 platforms)', price: 'KSH 35,000/mo', freq: 'Monthly' },
+                { service: 'Professional Email Setup (if not on Premium)', price: 'KSH 5,000', freq: 'One-time' },
+                { service: 'M-Pesa / Payment Gateway Integration', price: 'KSH 12,000', freq: 'One-time' },
+                { service: 'Extra Page (beyond package limit)', price: 'KSH 2,500/page', freq: 'One-time' },
               ].map(row => (
                 <tr key={row.service}>
                   <td style={{ padding: '1rem', borderBottom: `1px solid ${BORDER}`, color: TEXT_MUTED, fontSize: '0.95rem' }}>{row.service}</td>
