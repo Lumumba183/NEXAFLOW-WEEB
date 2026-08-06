@@ -12,4 +12,10 @@
   to = "/blog/:splat"
   status = 200
 
+# SPA catch-all — must be LAST so React Router handles all client-side routes
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
 # Deployed via Git push — auto-build enabled
