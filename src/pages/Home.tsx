@@ -737,6 +737,18 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+            <a href="/portfolio" style={{
+              display: 'inline-block', padding: '1rem 2.5rem',
+              border: `2px solid ${GOLD}`, borderRadius: 12,
+              color: GOLD_BRIGHT, fontWeight: 700, textDecoration: 'none',
+              transition: 'all 0.3s',
+            }}
+              onMouseEnter={e => { e.currentTarget.style.background = 'rgba(201,162,39,0.1)'; e.currentTarget.style.transform = 'translateY(-2px)' }}
+              onMouseLeave={e => { e.currentTarget.style.background = 'transparent'; e.currentTarget.style.transform = 'translateY(0)' }}>
+              View All Projects →
+            </a>
+          </div>
         </div>
       </section>
 

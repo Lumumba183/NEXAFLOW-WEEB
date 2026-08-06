@@ -24,7 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const navLinks = [
     { label: 'Services', href: isHome ? '#services' : '/#services' },
     { label: 'Pricing', href: isHome ? '#pricing' : '/#pricing' },
-    { label: 'Portfolio', href: isHome ? '#work' : '/#work' },
+    { label: 'Portfolio', href: '/portfolio' },
     { label: 'WeDial AI', href: isHome ? '#wedialai' : '/#wedialai' },
     { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: isHome ? '#contact' : '/#contact' },
@@ -132,8 +132,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div>
             <h4 style={{ fontSize: '1rem', fontWeight: 700, marginBottom: '1rem' }}>Company</h4>
             <ul style={{ listStyle: 'none', padding: 0 }}>
-              {[
+            {[
                 { label: 'About Us', href: '/#about' },
+                { label: 'Portfolio', href: '/portfolio' },
                 { label: 'Blog', href: '/blog' },
                 { label: 'Careers', href: '/#careers' },
                 { label: 'Partners', href: '/#partners' },
