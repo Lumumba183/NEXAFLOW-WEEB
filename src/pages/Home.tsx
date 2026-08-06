@@ -156,12 +156,44 @@ const projects = [
     link: 'https://www.gemonettoursandsafaris.com',
   },
   {
-    badge: 'Live Platform',
+    badge: 'Live Website',
     num: 'No. 05',
     title: 'MumoFreight Logistics',
     desc: 'Professional freight forwarding & cargo logistics platform — real-time shipment tracking, instant quote generation, and seamless booking for domestic & international shipping across East Africa.',
     img: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=500&h=280&fit=crop&auto=format&q=80',
     link: 'https://www.mumofreightcargo.com',
+  },
+  {
+    badge: 'Live Website',
+    num: 'No. 06',
+    title: 'Rijal Enterprises',
+    desc: 'Corporate enterprise website showcasing diverse business operations and services. Professional design built to establish credibility and drive client engagement.',
+    img: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&h=280&fit=crop&auto=format&q=80',
+    link: 'https://rijalenterprises.co.ke/',
+  },
+  {
+    badge: 'Live Website',
+    num: 'No. 07',
+    title: 'Utue Executive Safaris',
+    desc: 'Premium safari and travel experience platform offering curated executive-level tours across Kenya and East Africa. Elegant booking flow and rich destination content.',
+    img: 'https://images.unsplash.com/photo-1516426122078-c23e76319801?w=500&h=280&fit=crop&auto=format&q=80',
+    link: 'https://utuexecutivesafaris.com',
+  },
+  {
+    badge: 'Live Website',
+    num: 'No. 08',
+    title: 'Redland Junior School',
+    desc: 'Modern school website with engaging design, comprehensive academic information, and parent communication features. Built for an educational institution focused on excellence.',
+    img: 'https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=500&h=280&fit=crop&auto=format&q=80',
+    link: 'https://eclectic-treacle-18016a.netlify.app/',
+  },
+  {
+    badge: 'Live Website',
+    num: 'No. 09',
+    title: 'Grace & Hope Home',
+    desc: 'Compassionate nonprofit website for a children\'s home, featuring donation integration, success stories, and community engagement tools to support vulnerable children.',
+    img: 'https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?w=500&h=280&fit=crop&auto=format&q=80',
+    link: 'http://gracenhopehome.org',
   },
 ]
 
@@ -654,7 +686,7 @@ export default function Home() {
       {/* ===== PORTFOLIO ===== */}
       <section id="work" style={{ padding: '4rem 0', background: '#0a0f1a' }}>
         <div style={{ maxWidth: 1200, margin: '0 auto', padding: '0 2rem' }}>
-          {sectionHeader('Projects that deliver real results', '5 Projects')}
+          {sectionHeader('Our Portfolio', '9 Projects & Counting')}
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', marginTop: '3rem' }}>
             {projects.map(p => (
               <div key={p.title} style={{

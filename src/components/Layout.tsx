@@ -24,7 +24,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const navLinks = [
     { label: 'Services', href: isHome ? '#services' : '/#services' },
     { label: 'Pricing', href: isHome ? '#pricing' : '/#pricing' },
-    { label: 'Work', href: isHome ? '#work' : '/#work' },
+    { label: 'Portfolio', href: isHome ? '#work' : '/#work' },
     { label: 'WeDial AI', href: isHome ? '#wedialai' : '/#wedialai' },
     { label: 'Blog', href: '/blog' },
     { label: 'Contact', href: isHome ? '#contact' : '/#contact' },
